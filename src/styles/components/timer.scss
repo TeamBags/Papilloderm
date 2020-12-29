@@ -1,0 +1,33 @@
+.timer {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        margin-right: 15px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    &__time {
+        & span {
+            display: inline-block;
+            padding: 5px 7px;
+
+            font-size: 22px;
+            line-height: 30px;
+
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(7) {
+                margin-right: 5px;
+            }
+        }
+
+        & .tm {
+            position: relative;
+            font-weight: 700;
+            border: 1px solid #ed8e14;
+            border-radius: 4px;
+        }
+    }
+}

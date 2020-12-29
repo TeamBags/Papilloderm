@@ -1,0 +1,158 @@
+.header {
+    display: none;
+}
+
+@include rm(768) {
+    .header{
+        display: block;
+        background-color: white;
+        box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.2);
+
+        .container {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+            padding: 13px 0;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__link {
+            display: flex;
+            margin-right: 35px;
+            &--wrapper {
+                position: relative;
+                padding: 5px 30px 5px 50px;
+
+                &:first-child {
+                    margin-right: 30px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 38px;
+                    height: 36px;
+                    left: 0;
+                    top: 2px;
+                }
+
+                &:first-child::before {
+                    background: url(../img/icon_components.png) no-repeat center center;
+                }
+
+                &:last-child::before {
+                    background: url(../img/icon_reviews.png) no-repeat center center;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    right: 0;
+                    top: 0;
+                    background-color: #cecece;
+                }
+
+                a {
+                    font-size: 16px;
+                    line-height: 30px;
+                    vertical-align: middle;
+                    color: inherit;
+                    border-bottom: 1px dotted #444444;
+                    
+                    &:hover {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        &__button  {
+            margin-left: auto;
+        }
+    }
+}
+
+@include r(1023) {
+    .header {
+        .container {
+            padding: 0 20px;
+        }
+        .timer {
+            flex-direction: column;
+            &__text {
+                margin: 0 0 3px;
+                br {
+                    display: none;
+                }
+            }
+            &__time span {
+                padding: 5px;
+            }
+        }
+    }
+}
+
+@include rm(1024) {
+    .header {
+        display: block;
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            img {
+                margin-right: 20px;
+            }
+        }
+
+        &__logo,
+        &__link {
+            margin-right: 20px;
+        }
+
+        &__link--wrapper {
+            padding: 5px 20px 5px 50px;
+        }
+        & .timer {
+            &__text {
+                br {
+                    display: inline-block;
+                }
+            }
+            &__time span {
+                padding: 5px 7px;
+            }
+        }
+    }
+}
+
+
+@include rm(1220) {
+    .header {
+        &__logo {
+            margin-right: 85px;
+            &--logo {
+                font-size: 24px;
+                line-height: 1;
+            }
+        }
+
+        &__link {
+            margin-right: 40px;
+            &--wrapper {
+                padding: 5px 50px;
+                &:first-child {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}

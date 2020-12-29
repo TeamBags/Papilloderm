@@ -1,0 +1,12 @@
+.banner
+  .container
+    .banner__wrapper
+      .banner__logo
+        picture
+          source(media="(max-width: 1023px)", srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
+          source(srcset="img/prod.webp", type="image/webp")
+          img.banner__logo--img(src="img/prod.png", alt="Friocard" width="48")
+      h3.banner__order-now Только сегодня <br> 
+        span.date-0(data-format="dd month")
+      include timer
+      button.banner__button.btn__small.ever-popup-btn Заказать

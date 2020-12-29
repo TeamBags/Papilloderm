@@ -1,0 +1,95 @@
+@include r(1023) {
+  .banner {
+      display: none !important;
+  }
+}
+
+@include rm(1024) {
+    .banner {
+        position: fixed;
+        bottom: 0;
+        z-index: 30;
+        width: 100%;
+        padding: 10px 0;
+        color: white;
+        background-color: blue;
+
+        .container {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        &__logo {
+          padding: 0 5px;
+          margin-right: 10px;
+        }
+
+        &__order-now {
+          position: relative;
+          padding: 0 20px 0 100px;
+          margin-right: 15px;
+          font-size: 24px;
+          line-height: 1;
+          font-weight: 700;
+          &::before {
+            position: absolute;
+            content: "-50%";
+            width: 78px;
+            height: 78px;
+            padding: 24px 2px;
+            top: calc(50% - 39px);
+            left: 0;
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 700;
+            text-align: center;
+            color: white;
+            background: url(../img/mainform_plashka.png) no-repeat center center;
+            background-size: contain;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: grey;
+          }
+        }
+
+        .timer {
+            margin-right: auto;
+            br {
+              display: none;
+            }
+            &__text {
+              margin-right: 20px;
+            }
+            .tm {
+              color: black;
+              background-color: white;
+              border-color: grey;
+            }
+        }
+    }
+}
+
+@include rm(1220) {
+    .banner {
+      &__logo {
+        padding: 0 15px;
+        margin-right: 20px;
+      }
+      &__order-now {
+        position: relative;
+        padding: 0 50px 0 100px;
+        margin-right: 50px;
+      }
+    }
+}
