@@ -1,0 +1,26 @@
+.listdoctor
+  .container
+    .listdoctor__wrapper
+      picture
+        source(media="(max-width: 767px)", srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
+        source(srcset="img/doctor.webp", type="image/webp")
+        img.listdoctor__doctor(loading="lazy" src="img/doctor.png" alt="doctor")
+      .listdoctor__wrapper--left
+        ul.listdoctor__list
+          li.listdoctor__item
+            span.bold Для ускорения эффекта Friocard, 
+            |  следует избегать выхода на улицу в пик солнечной активности
+          li.listdoctor__item
+            span.bold Для максимального эффекта Friocard, 
+            |  пройдите курс витаминов для сердечно-сосудистой системы
+          li.listdoctor__item
+            span.bold Для предупреждения гипертонии, 
+            |  следует ограничить потребление жирной пищи и алкоголя
+        .listdoctor__sign
+          .listdoctor__sign--text
+            p.listdoctor__name.bold John Wilson
+            p.listdoctor__specialty врач-кардиолог
+          .listdoctor__sign--img
+            picture
+              source(type="image/webp", srcset="img/doctor-sign.webp")
+              img.listdoctor__img(loading="lazy", src="img/doctor-sign.png", alt="doctor-sign")

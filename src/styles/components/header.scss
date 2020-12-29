@@ -16,16 +16,17 @@
         &__wrapper {
             display: flex;
             align-items: center;
-            padding: 13px 0;
+            padding: 18px 0;
         }
 
         &__logo {
-            display: none;
+            margin-right: auto;
+            // display: none;
         }
 
         &__link {
             display: flex;
-            margin-right: 35px;
+            // margin-right: 35px;
             &--wrapper {
                 position: relative;
                 padding: 5px 30px 5px 50px;
@@ -78,28 +79,12 @@
         &__button  {
             margin-left: auto;
         }
+        .timer {
+            display: none;
+        }
     }
 }
 
-@include r(1023) {
-    .header {
-        .container {
-            padding: 0 20px;
-        }
-        .timer {
-            flex-direction: column;
-            &__text {
-                margin: 0 0 3px;
-                br {
-                    display: none;
-                }
-            }
-            &__time span {
-                padding: 5px;
-            }
-        }
-    }
-}
 
 @include rm(1024) {
     .header {
@@ -108,9 +93,6 @@
         &__logo {
             display: flex;
             align-items: center;
-            img {
-                margin-right: 20px;
-            }
         }
 
         &__logo,
@@ -120,16 +102,23 @@
 
         &__link--wrapper {
             padding: 5px 20px 5px 50px;
+            &:first-child {
+                margin-right: 10px;
+            }
         }
         & .timer {
+            display: flex;
             &__text {
+                margin-right: 10px;
                 br {
                     display: inline-block;
                 }
             }
-            &__time span {
-                padding: 5px 7px;
-            }
+            &__time {
+                min-width: 183;
+                span {
+                   padding: 3px 5px;
+               }}
         }
     }
 }
@@ -138,7 +127,7 @@
 @include rm(1220) {
     .header {
         &__logo {
-            margin-right: 85px;
+            margin-right: auto;
             &--logo {
                 font-size: 24px;
                 line-height: 1;
@@ -148,10 +137,18 @@
         &__link {
             margin-right: 40px;
             &--wrapper {
-                padding: 5px 50px;
+                padding: 5px 40px;
                 &:first-child {
                     margin-right: 40px;
                 }
+            }
+        }
+        .timer {
+            &__text {
+                margin-right: 15px;
+            }
+            &__time .tm {
+                padding: 3px 12px;
             }
         }
     }
