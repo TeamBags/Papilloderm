@@ -88,8 +88,34 @@ button {
   white-space: nowrap;
 }
 
-
 br {
   line-height: 1;
   font-size: 0;
+}
+
+.btn__small {
+  width: 200px;
+  padding: 12px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: white;
+  background: $main-red;
+  border-radius: 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
