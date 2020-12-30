@@ -267,7 +267,7 @@
 }
 
 
-@include rm(1219) {
+@include rm(1220) {
   .reviews {
 
     .container {
@@ -316,7 +316,7 @@
   font-weight: 900;
 }
 
-.reviews-cta {
+.feedback {
   border-radius: 5px;
   border: 1px solid grey;
   padding: 20px;
@@ -327,12 +327,12 @@
 }
 
 @media screen and (min-width: 1220px) {
-  .reviews-cta {
+  .feedback {
     padding: 40px 50px;
   }
 }
 
-.reviews-form__row {
+.feedback__form__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,7 +340,7 @@
   flex-wrap: wrap;
 }
 
-.reviews-form__field {
+.feedback__form__field {
   width: 100%;
   color: #666;
   font-family: inherit;
@@ -353,7 +353,7 @@
   padding: 20px 35px;
 }
 
-.reviews-form__field-wrap {
+.feedback__form__field-wrap {
   position: relative;
   margin-bottom: 20px;
   padding: 1px;
@@ -371,34 +371,34 @@
   }
 }
 
-.reviews-form__field-wrap--name {
+.feedback__form__field-wrap--name {
   width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  .reviews-form__field-wrap--name {
+  .feedback__form__field-wrap--name {
     margin-right: 25px;
     width: 30%;
   }
 }
 
-.reviews-form__field-wrap--message {
+.feedback__form__field-wrap--message {
   width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
-  .reviews-form__field-wrap {
+  .feedback__form__field-wrap {
     margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .reviews-form__intrenal-col {
+  .feedback__form__intrenal-col {
     margin-bottom: 20px;
   }
 }
 
-.reviews-form__textarea {
+.feedback__form__textarea {
   resize: none;
   overflow: hidden;
   min-height: 100px;
@@ -406,7 +406,7 @@
   border-radius: 10px;
 }
 
-.reviews-form__file {
+.feedback__form__file {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,7 +416,7 @@
   cursor: pointer;
 }
 
-.reviews-form__file-img {
+.feedback__form__file-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +438,7 @@
   background-position: center;
 }
 
-.reviews-form__file-text {
+.feedback__form__file-text {
   color: #666;
   font-size: 16px;
   line-height: 18px;
@@ -448,7 +448,7 @@
 
 
 
-.reviews-form__error {
+.feedback__form__error {
   font-size: 12px;
   color: red;
   position: absolute;
@@ -457,11 +457,11 @@
   display: none;
 }
 
-.reviews-form__checkmark-icon {
+.feedback__form__checkmark-icon {
   display: none;
 }
 
-.reviews-form__file.rloaded .reviews-form__file-img {
+.feedback__form__file.rloaded .feedback__form__file-img {
   background-image: none
 }
 
@@ -577,8 +577,8 @@
   height: 23px
 }
 
-.reviews-form__field-wrap--message.invalid .reviews-form__error,
-.reviews-form__field-wrap--name.invalid .reviews-form__error {
+.feedback__form__field-wrap--message.invalid .feedback__form__error,
+.feedback__form__field-wrap--name.invalid .feedback__form__error {
   display: block;
 }
 
@@ -590,26 +590,26 @@
   border: 1px solid red;
 }
 
-.reviews-form__field-wrap--name.valid,
-.reviews-form__field-wrap--name.invalid {
+.feedback__form__field-wrap--name.valid,
+.feedback__form__field-wrap--name.invalid {
   border-radius: 50px;
 }
 
-.reviews-form__field-wrap--message.valid,
-.reviews-form__field-wrap--message.invalid {
+.feedback__form__field-wrap--message.valid,
+.feedback__form__field-wrap--message.invalid {
   border-radius: 10px;
 }
 
 @include r(1023) {
-  .reviews-form__intrenal-col {
+  .feedback__form__intrenal-col {
     order: 1;
   }
 
-  .reviews-form__input-text {
+  .feedback__form__input-text {
     order: 2;
   }
 
-  .reviews-form__input-text {
+  .feedback__form__input-text {
     order: 3;
   }
 
