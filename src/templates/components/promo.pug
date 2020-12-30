@@ -1,0 +1,44 @@
+.section.promo
+  .container
+    .promo__content
+      .form.promo__form
+        .form__content
+          .form__top
+          p.form__title.text-bold Внимание!
+          p.form__subtitle Только сегодня 
+            br
+            |
+            span.nowrap.date-0.text-accent(data-format="dd monthFull")
+            | , цена
+          .form__price.price
+            //- .price-old
+            //-   span.price__title Старая цена
+            //-   .price__count                                
+            //-     span.x_price_previous 10890
+            //-     span.x_currency грн.
+            //- span.price__div
+            .price-new
+              //- span.price__title Новая цена
+              .price__count
+                span.x_price_current 196
+                span.x_currency грн.
+          form.x_order_form.form__main(action="/submit" method="post")
+            .input-wrap.input-wrap--name
+              svg.input-icon.input-icon--user
+                use(xlink:href="#icon_user")
+              input.form__input(type="text" name="name" placeholder="Мое имя" required)
+            .input-wrap.input-wrap--tel
+              svg.input-icon.input-icon--tel
+                use(xlink:href="#icon_phone")
+              input.form__input(type="tel" name="phone" placeholder="Мой телефон" required)
+            button.form__button.btn Оформить заказ
+            span.form__note *при оформлении заказа
+          .form__visitors
+            svg.icon-visitors
+              use(xlink:href="#icon_eye")
+            p Сейчас на сайте 
+              span.text-red.text-bold 20
+              |  человек
+        p.form__last Осталось 
+          span.lastpack.text-red.text-bold 80
+          |  упаковок

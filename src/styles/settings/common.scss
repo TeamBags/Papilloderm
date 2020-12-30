@@ -1,10 +1,13 @@
 body {
   font-family: $main-font;
   font-size: 14px;
+  color: #444444;
 }
-html{
+
+html {
   overflow-x: hidden;
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -88,15 +91,40 @@ button {
   white-space: nowrap;
 }
 
+.text-accent {
+  color: $main-orange;
+}
+
+.text-red {
+  color: $main-red;
+}
+
 br {
   line-height: 1;
   font-size: 0;
 }
 
+.btn {
+  width: 100%;
+  padding: 20px 30px;
+  background: linear-gradient(to right, #fb6920 0, #ff2e51 49%, #ea4949 50%, #ea4949 100%);
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+  border-radius: 100px;
+  color: #ffffff;
+  cursor: pointer;
+  line-height: 1;
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 0 2px 5px #fb6920;
+    background-position: 0 0;
+  }
+}
+
 .btn__small {
   width: 200px;
   padding: 12px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
