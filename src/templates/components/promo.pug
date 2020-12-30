@@ -1,6 +1,60 @@
-.section.promo
+.section.promo.bg.block
   .container
     .promo__content
+      .promo__product
+        .product__girl
+          .twentytwenty-wrapper.twentytwenty-horizontal
+            .changes__img.twentytwenty-container
+              .changes__before
+                picture
+                  source(srcset="img/girl-left.webp" type="image/webp")
+                  img(src="img/girl-left.png" alt="prod")
+              .changes__after
+                picture
+                  source(srcset="img/girl-right.webp" type="image/webp")
+                  img(src="img/girl-right.png" alt="prod")
+        .product-wrap.animation-pack
+          picture
+            source(srcset="img/prod180.webp" type="image/webp")
+            img.promo-prod--mob(src="img/prod180.png" alt="prod")
+          picture
+            source(srcset="img/prod90.webp" type="image/webp")
+            img.promo-prod--desk(src="img/prod90.png" alt="prod")
+          .medal.animation-medal
+            picture
+              source(srcset="img/icon-choice.webp" type="image/webp")
+              img(src="img/icon-choice.png" alt="prod")
+      ul.promo__quality
+        li.promo__quality-item
+          picture
+            source(srcset="img/icon-promo1.webp" type="image/webp")
+            img.quality(src="img/icon-promo1.png" alt="prod")
+        li.promo__quality-item
+          picture
+            source(srcset="img/icon-promo2.webp" type="image/webp")
+            img.quality(src="img/icon-promo2.png" alt="prod")
+        li.promo__quality-item
+          picture
+            source(srcset="img/icon-promo3.webp" type="image/webp")
+            img.quality(src="img/icon-promo3.png" alt="prod")
+      .promo__description
+        h2.promo__toptitle На коже появились папилломы?
+        h2.promo__title.title Избавьтесь от них, пока они не&nbsp;убили вас!
+        h2.promo__subtitle Papilloderm устранит папилломы и&nbsp;другие кожные&nbsp;образования: 
+        ul.promo__list
+          li.promo__list-item
+            svg.promo__list-icon
+              use(xlink:href="#bullet")
+            p Бесследно
+          li.promo__list-item
+            svg.promo__list-icon
+              use(xlink:href="#bullet")
+            p Быстро и без&nbsp;боли
+          li.promo__list-item
+            svg.promo__list-icon
+              use(xlink:href="#bullet")
+            p За&nbsp;1&nbsp;курс
+
       .form.promo__form
         .form__content
           .form__top

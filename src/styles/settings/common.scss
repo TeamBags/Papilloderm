@@ -1,6 +1,7 @@
 body {
   font-family: $main-font;
   font-size: 14px;
+  line-height: 1.1;
   color: #444444;
 }
 
@@ -97,6 +98,31 @@ button {
 
 .text-red {
   color: $main-red;
+}
+
+.no-webp .bg {
+  background-color: #fbfef1;
+  background-image: none;
+
+  @include rm(480) {
+    background-image: url(../img/background.png);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.webp .bg {
+  background-color: #fbfef1;
+  background-image: none;
+
+  @include rm(480) {
+    background-color: #fbfef1;
+    background-image: url(../img/background.webp);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 br {

@@ -25,4 +25,10 @@ export default () => {
     }
   }, 6000);
 
+  setTimeout(function () {
+    $('.changes__img').twentytwenty({
+      no_overlay: true,
+    });
+  }, 100);
+
 };

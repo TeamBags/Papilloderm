@@ -2,7 +2,7 @@
   $.fn.twentytwenty = function(options) {
     var options = $.extend(
       {
-        default_offset_pct: 0.41,
+        default_offset_pct: 0.5,
         orientation: "horizontal",
         before_label: "Before",
         after_label: "After",
@@ -103,7 +103,7 @@
             ? (positionY - offsetY) / imgHeight
             : (positionX - offsetX) / imgWidth;
 
-        return minMaxNumber(sliderPercentage, 0.18, 0.6);
+        return minMaxNumber(sliderPercentage, 0.1, 0.9);
       };
 
       $(window).on("resize.twentytwenty", function(e) {
