@@ -30,19 +30,19 @@ $(document).ready(function () {
 
   var toggleFormBtn = $('.toggle-form-btn');
   var reviewsBottom = $('.reviews__bottom');
-  var reviewsCta = $('.reviews-cta');
-  var reviewsInputsWrap = $('.reviews-form__field-wrap');
+  var reviewsCta = $('.feedback');
+  var reviewsInputsWrap = $('.feedback__form__field-wrap');
   var inputFile = $('.input-file');
-  var labelFile = $('.reviews-form__file');
+  var labelFile = $('.feedback__form__file');
   var reviewsInput = $('.reviews-input');
   var reviewsInputText = $('.reviews-input-text');
-  var reviewsInputTextarea = $('.reviews-form__textarea');
-  var reviewsInputTextareaJS = document.querySelector('.reviews-form__textarea');
-  var reviewsInputName = $('.reviews-form__input-name');
+  var reviewsInputTextarea = $('.feedback__form__textarea');
+  var reviewsInputTextareaJS = document.querySelector('.feedback__form__textarea');
+  var reviewsInputName = $('.feedback__form__input-name');
   var reviewsPopup = $('.reviews-popup');
-  var fileText = $('.reviews-form__file-text');
-  var fileImg = $('.reviews-form__file-img img');
-  var fileIcon = $('.reviews-form__checkmark-icon');
+  var fileText = $('.feedback__form__file-text');
+  var fileImg = $('.feedback__form__file-img img');
+  var fileIcon = $('.feedback__form__checkmark-icon');
   var fileFlag = true;
 
   reviewsInputTextareaJS.value = '';
@@ -98,7 +98,7 @@ $(document).ready(function () {
     reviewsCta.show();
   });
 
-  $('.reviews-form').submit(function () {
+  $('.feedback__form').submit(function () {
     if (reviewsInputTextarea.val().length !== 0 && reviewsInputName.val().length !== 0) {
       reviewsCta.hide();
       toggleFormBtn.show();
@@ -117,7 +117,7 @@ $(document).ready(function () {
       labelFile.removeClass('rloaded');
       reviewsInputsWrap.removeClass('invalid');
       reviewsInputsWrap.removeClass('valid');
-      $('.reviews-form__star').removeClass('filled');
+      $('.feedback__form__star').removeClass('filled');
 
     } else {
       reviewsInputsWrap.each(function (i) {

@@ -1,227 +1,98 @@
+mixin review(slide)
+  .reviews__el
+    .reviews__el--top_wrapper
+      picture
+        source(srcset="img/"+slide.webp, type="image/webp")
+        img.reviews__el--ava(src="img/"+slide.img, alt="Avatar")
+      .reviews__el--top
+        .reviews__el--name!= slide.name 
+        .reviews__el--descr!= slide.age
+    p.reviews__el--text!= slide.text
+
+-
+  const reviewArray = [
+    {
+      webp: 'review__01.webp',
+      img: 'review__01.png',
+      name: 'Анна М. ',
+      age: '34 года',
+      text: 'Средство реально рабочее, проверено на себе. Для того, чтобы убрать большие папилломы, понадобилось несколько месяцев, но они ушли полностью, сейчас на тех местах еле заметные пигментные пятнышки без всяких шрамчиков, гладкая кожа. Конечно немного печет после нанесения, но вполне себе терпимо, по крайней мере мне. Папилломы были в области подмышек.'
+    },
+    {
+      webp: 'review__02.webp',
+      img: 'review__02.png',
+      name: 'Галина Л.',
+      age: '52 года',
+      text: 'Действенное средство, удалила им папиллому на веке под бровью, небольшую. <br> Мазала по инструкции, она полностью отпала и следа нет. Врачи рекомендовали удалять лазером в офтальмологии за бешеные деньги по сравнению с ценой на данное средство.'
+    },
+    {
+      webp: 'review__03.webp',
+      img: 'review__03.png',
+      name: 'Светлана В.',
+      age: '44 года',
+      text: 'Папиллодерм — классное средство, удаляла две шипицы на руке, мазала на ночь, прошло где-то около двух недель, одна отпала и вторая на подходе.'
+    },
+    {
+      webp: 'review__04.webp',
+      img: 'review__04.png',
+      name: 'Алексей П.',
+      age: '38 лет',
+      text: 'Отличное средство. Рекомендую. Папиломы отпадают сами, у меня через неделю использования.'
+    },
+    {
+      webp: 'review__05.webp',
+      img: 'review__05.png',
+      name: 'Владимир А.',
+      age: '43 года',
+      text: 'Мне понравился Папилодерм.Все попиломы отпали за две недели. Главное придерживаться инструкции и всё будет ОК.Рекомендую!'
+    },
+    {
+      webp: 'review__06.webp',
+      img: 'review__06.png',
+      name: 'Мария',
+      age: '49 лет',
+      text: 'Взяла по совету, но слабо верилось, что поможет. Но нет! За неделю прошла довольно большая папиллома. Пользовалась больше недели, после этого папиллома почернела и со временем отпала. Баночка маленькая, но хватит думаю надолго.'
+    },
+    {
+      webp: 'review__07.webp',
+      img: 'review__07.png',
+      name: 'Лариса',
+      age: '37 лет',
+      text: 'Отличное средство, на 100% эффективное. В течение 5-7 дней есть результат. На месте отпавшей папилломы остается маленькое пятнышко, которое смазываю на ночь облепиховым маслом. Ранее удаляла лазером, но от него очень долго остается ранка.'
+    },
+    {
+      webp: 'review__08.webp',
+      img: 'review__08.png',
+      name: 'Елена С.',
+      age: '45 лет',
+      text: 'Очень рада, что нашла по отзывам Papilloderm. Избавилась от большой подошвенной бородавки. Наносила каждый день на ночь. Сначала она побелела, затем — пошли темные пятнышки и появились болевые ощущения, после этого — бородавка стала черная и отмерла. Супер средство. Сэкономила время и деньги на недешевое удаление.'
+    },
+    {
+      webp: 'review__09.webp',
+      img: 'review__09.png',
+      name: 'Вероника Л.',
+      age: '47 лет',
+      text: 'Суперское средство. Сколько до этого потратили денег на врача и никакой пользы. Заказала Papilloderm и лечила бородавки, все отлично сошло. Спасибо за быструю доставку!'
+    },
+  ]
+
+
 section.reviews(id='reviews')
     .container
         h2.title.reviews__title Отзывы покупателей о Friocard
         .reviews__slider
-            .reviews__el
-                .reviews__stars.reviews__stars--empty
-                picture
-                    source(srcset="img/rev1.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev1.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Maria R.
-                    .reviews__el--descr Friocard избавил меня от&nbsp;головных болей
-                .reviews__el--line
-                p.reviews__el--text Каждое лето у меня начинались проблемы с давлением. Все из-за того, что у меня наследственная гипертония. Пила обезболивающие, но понимала, что это не решение проблемы. Проблему решили капсулы Friocard. С тех пор, как принимаю это средство, гипертония меня не беспокоит. Голова не болела ни дня этим летом.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev2.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev2.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Paul L.
-                    .reviews__el--descr Уже давно не чувствовал себя так хорошо
-                .reviews__el--line
-                p.reviews__el--text Friocard изменил мою жизнь. Раньше у меня были проблемы с давлением, я принимал обезболивающие, брал больничные на работе и весь день лежал в постели. Но после курса Friocard давление нормализовалось, не растет даже в сильную жару. Я больше не боюсь за свое здоровье и провожу много времени с друзьями.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev3.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev3.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Boris V.
-                    .reviews__el--descr Стала лучше память, улучшилось зрение
-                .reviews__el--line
-                p.reviews__el--text Хорошее средство для давления, понижает его постепенно и безопасно. Заметил интересный эффект от средства. У меня стала лучше память, я стал лучше соображать. Стал хорошо видеть, очень интересный эффект.
-            .reviews__el
-                .reviews__stars.reviews__stars--empty
-                picture
-                    source(srcset="img/rev4.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev4.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Alex M.
-                    .reviews__el--descr Больше не боюсь жары
-                .reviews__el--line
-                p.reviews__el--text Жара всегда действовала на меня плохо. А именно у меня давление резко повышалось. Самочувствие при этом было ужасное: постоянная вялость. Но после того, как стал принимать Friocard, ситуация изменилась. Давление больше не повышается, как бы жарко ни было, я чувствую себя прекрасно.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev5.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev5.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Victoria J.
-                    .reviews__el--descr Проблема давления решена
-                .reviews__el--line
-                p.reviews__el--text Проблемы с давлением у меня наследственные, но в полной мере я их ощутила во время отпуска, когда я не высыпалась и постоянно переезжала. Повезло, что у подруги был friocard. Помогает он хорошо, давление опускается плавно, никаких головокружений. Советую всем гипертоникам с наследственной гипертонией.
-            .reviews__el
-                .reviews__stars.reviews__stars--empty
-                picture
-                    source(srcset="img/rev6.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev6.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Angelica K.
-                    .reviews__el--descr Не было побочных эффектов
-                .reviews__el--line
-                p.reviews__el--text Friocard  меня завоевал тем, что у него нет побочных эффектов. Ведь часто такие средства тяжелы для печени и организма. А friocard я принимала спокойно, не боясь, что причиню вред организму. Давление стабильное, чувствую себя здоровой.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev7.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev7.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name German M.
-                    .reviews__el--descr Хороший состав и эффект
-                .reviews__el--line
-                p.reviews__el--text В составе Friocard есть и омела и лекарственная мелисса. А я читал, что они хорошо помогают при гипертонии и искал средства с ними в составе. Нашел Friocard. Ожидания средство оправдало, так как давление стабильно нормальное. Посоветовал всем своим друзьям и родственникам с гипертонией.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev8.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev8.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Franz O.
-                    .reviews__el--descr Помог и мне и моему отцу
-                .reviews__el--line
-                p.reviews__el--text Friocard теперь для меня средство от давления номер 1. Помогает если давление скачет из-за стресса, нервов, если просто был тяжелый день. Но и если человек из-за возраста склонен к гипертонии. Я и себе помог с гипертонией разобраться и своему отцу помог. А он половину жизни с давлением мучался.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev9.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev9.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Anna A.
-                    .reviews__el--descr Очень бережно приводит давление в норму
-                .reviews__el--line
-                p.reviews__el--text Я перепробовала много средств от гипертонии.Но ни одно меня полностью не удовлетворяло. А вот Friocard удовлетворил во всем. Начиная от того, что давление понижает очень спокойно, без резких скачков, заканчивая нейтральным вкусом.
-            .reviews__el
-                .reviews__stars.reviews__stars--empty
-                picture
-                    source(srcset="img/rev10.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev10.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Maria T.
-                    .reviews__el--descr Помог избежать гипертонического криза
-                .reviews__el--line
-                p.reviews__el--text Friocard купила по совету подруги, которая всегда мучилась от гипертонии. Я заказала, попробовала, когда давление повысилось. Результат меня порадовал. Со 140/90 давление снизилось до 110/70 и потом еще долго в норме держалось.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev11.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev11.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Hector F.
-                    .reviews__el--descr Помогает если принимать по инструкции
-                .reviews__el--line
-                p.reviews__el--text Сначала думал, что Friocard не работает. Но я сам был виноват, так как принимал его не по инструкции. А когда начал принимать ежедневно, давление стало, как в детстве. Стабильным и низким.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev12.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev12.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Helena L.
-                    .reviews__el--descr При утреннем подъеме давления идеальный вариант
-                .reviews__el--line
-                p.reviews__el--text Friocard – надежное средство для хорошего начала дня. С тех пор, как я стала его принимать, давление меня не беспокоит и не портит мои дни. Я совсем перестала принимать обезболивающие таблетки, которыми лечила головную боль.
-            .reviews__el
-                .reviews__stars.reviews__stars--empty
-                picture
-                    source(srcset="img/rev13.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev13.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Sarah T.
-                    .reviews__el--descr Хорошо сбивает давление
-                .reviews__el--line
-                p.reviews__el--text С возрастом стало повышаться давление даже в состоянии покоя. Пыталась обойтись без средств, но в итоге сдалась. Заказала Friocard. Если бы знала, что такое хорошее средство, заказала бы раньше. Прошла курс, давление уже два месяца в порядке.
-            .reviews__el
-                .reviews__stars.reviews__stars--empty
-                picture
-                    source(srcset="img/rev14.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev14.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Michael J.
-                    .reviews__el--descr Альтернатива аптечным средствам
-                .reviews__el--line
-                p.reviews__el--text Мои привычные средства, которые я принимаю от давления, стали менее эффективны. А давление беспокоить стало чаще. В Friocard я обрел средство, которое гарантированно помогает при повышенном давлении. Эффект длится долго, давление снижается плавно.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev15.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev15.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Monique A.
-                    .reviews__el--descr Голова ясная и не болит
-                .reviews__el--line
-                p.reviews__el--text Когда у меня повышалось давление, у меня начинала болеть голова. Так сильно, что я без обезболивающих уже не могла. Но после того, как я стала регулярно принимать Friocard, голова вообще перестала болеть. Я приятно удивлена эффектом и скажу, что если у меня начнутся проблемы с давлением, то я знаю, чем себе помочь.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev16.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev16.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Patrick R.
-                    .reviews__el--descr Больше не боюсь инсульта
-                .reviews__el--line
-                p.reviews__el--text Давление опасно, так что если давление начинает часто беспокоить, здоровьем нужно заняться. Friocard как раз помогает поправить здоровье. Он укрепляет сосуды, возвращает им эластичность. Я прошел курс и проблема давления из моей жизни ушла.
-            .reviews__el
-                .reviews__stars.reviews__stars--empty
-                picture
-                    source(srcset="img/rev17.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev17.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Lisa G.
-                    .reviews__el--descr Хорошо снижает давление, но доставка опоздала
-                .reviews__el--line
-                p.reviews__el--text От приема Friocard остались одни положительные впечатления. Кроме нормального давления у меня хорошее настроение и уверенность в своем здоровье. Единственный минус, что задержали на один день доставку, а так все просто отлично.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev18.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev18.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Candy H.
-                    .reviews__el--descr Натуральное и эффективное средство
-                .reviews__el--line
-                p.reviews__el--text Не люблю химические средства, от которых сушит горло и голова кружится. Поэтому я заказала Friocard — средство, которое максимально натуральное в отличии от большинства, которые продаются в аптеках. Мне помогает от высокого давления, я довольна и заказала еще упаковку на всякий случай.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev19.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev19.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Alan P.
-                    .reviews__el--descr Давление теперь в норме
-                .reviews__el--line
-                p.reviews__el--text Всем советую Friocard, так как уверен, что лучше средства от гипертонии нет. Для лучшего результата нужно повременить с физическими упражнениями, так эффект наступит гораздо быстрее. Само средство снижает давление быстро, но без вреда для организма. Принимаю неделю, эффект есть.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev20.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev20.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Eva G.
-                    .reviews__el--descr Удобно принимать, быстрый эффект
-                .reviews__el--line
-                p.reviews__el--text Friocard это средство от гипертонии. Его удобно принимать, это капсулы. Он быстро снимает все симптомы повышенного давления. Пройти весь курс легко, даже не замечаешь, что принимаешь средство от гипертонии. Зато после курса здоровье будет отличным.
-            .reviews__el
-                .reviews__stars.reviews__stars--full
-                picture
-                    source(srcset="img/rev21.webp", type="image/webp")
-                    img.reviews__el--ava(src="img/rev21.png", alt="")
-                .reviews__el--top
-                    .reviews__el--name Sarah T.
-                    .reviews__el--descr Могу нормально работать и отдыхать
-                .reviews__el--line
-                p.reviews__el--text Из-за давления сильно болела голова, а это мне не только работать мешало, но и отдыхать. Так как на таблетках никакого отдыха не может быть, а только сон на диване. Friocard изменил мою жизнь. Давление всегда нормальное, провожу время, как хочу, работаю лучше, чем раньше.
-        p.reviews__help Вы принимали Friocard? 
-            br
-            | Помогите другим убедиться в его эффективности.
+            each slide in reviewArray
+              +review(slide)
+        //- p.reviews__help Вы принимали Friocard? 
+        //-     br
+        //-     | Помогите другим убедиться в его эффективности.
         button.button.reviews__btn.toggle-form-btn Добавить отзыв
-        .reviews__cta.reviews-cta
-            form.reviews__form.reviews-form
-                .reviews-form__row
-                    .reviews-form__field-wrap.reviews-form__field-wrap--name.reviews-form__input-text
-                        input.reviews-form__input.reviews-form__input-name.reviews-form__field.reviews-input.reviews-input-text(type="text", placeholder="Ваше имя")
-                        span.reviews-form__error Используйте символы от а до я и от a до z
+        .reviews__cta.feedback
+            form.reviews__form.feedback__form
+                .feedback__form__row
+                    .feedback__form__field-wrap.feedback__form__field-wrap--name.feedback__form__input-text
+                        input.feedback__form__input.feedback__form__input-name.feedback__form__field.reviews-input.reviews-input-text(type="text", placeholder="Ваше имя")
+                        span.feedback__form__error Используйте символы от а до я и от a до z
                     .feedback__rating
                         span.feedback__rating-text Ваша оценка
                         span.feedback__star(data-value="1")
@@ -229,18 +100,18 @@ section.reviews(id='reviews')
                         span.feedback__star(data-value="3")
                         span.feedback__star(data-value="4")
                         span.feedback__star(data-value="5")
-                    .reviews-form__intrenal-col
-                        label.reviews-form__file(for="file")
-                            span.reviews-form__file-img
-                                span.reviews-form__checkmark-icon
+                    .feedback__form__intrenal-col
+                        label.feedback__form__file(for="file")
+                            span.feedback__form__file-img
+                                span.feedback__form__checkmark-icon
                                     svg(xmlns="http://www.w3.org/2000/svg", width="24", height="24", viewBox="0 0 24 24")
                                         path(fill="#0f0", d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z")
-                            span.reviews-form__file-text Загрузить ваше фото
+                            span.feedback__form__file-text Загрузить ваше фото
                         input.visually-hidden.input-file.reviews-input(id="file", type="file" accept="image/*")
-                    .reviews-form__field-wrap.reviews-form__field-wrap--message.reviews-form__input-text
-                        textarea.reviews-form__textarea.reviews-form__field.reviews-input(name="review", placeholder="Отзыв")
-                        span.reviews-form__error Оставьте отзыв
-                button.btn__small.btn--smaller.reviews__btn.reviews-form__btn Отправить
+                    .feedback__form__field-wrap.feedback__form__field-wrap--message.feedback__form__input-text
+                        textarea.feedback__form__textarea.feedback__form__field.reviews-input(name="review", placeholder="Отзыв")
+                        span.feedback__form__error Оставьте отзыв
+                button.btn__small.btn--smaller.reviews__btn.feedback__form__btn Отправить
         .reviews-popup
             .reviews-popup__inner
                 .reviews-popup__text
