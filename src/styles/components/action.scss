@@ -1,0 +1,246 @@
+.action {
+  padding-top: 25px;
+  border-top: 1px solid #dcd9d9;
+
+  @include rm(1024) {
+    padding-top: 35px;
+  }
+
+  @include rm(1220) {
+    padding-top: 55px;
+  }
+
+  &__content {
+    @include rm(640) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__top {
+    width: 100%;
+    flex-shrink: 0;
+
+    @include rm(1024) {
+      width: auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  form {
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include rm(640) {
+      max-width: none;
+      width: 310px;
+      order: 1;
+    }
+
+    @include rm(1024) {
+      width: 100%;
+      padding-bottom: 29px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      order: 0;
+      position: relative;
+    }
+  }
+
+  .form__title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+
+    @include rm(1024) {
+      text-align: left;
+    }
+
+    @include rm(1220) {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__subtitle {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+
+    @include rm(640) {
+      width: 50%;
+      margin: 0 0 20px;
+    }
+
+    @include rm(1024) {
+      width: 100%;
+      margin: 0;
+      text-align: left;
+      line-height: 0.5;
+    }
+
+    @include rm(1220) {
+      line-height: 1.1;
+    }
+
+    &--mob {
+      @include rm(640) {
+        display: none;
+      }
+
+      @include rm(1024) {
+        display: block;
+      }
+
+    }
+
+    &--desk {
+      display: none;
+
+      @include rm(640) {
+        display: block;
+      }
+
+      @include rm(1024) {
+        display: none;
+      }
+    }
+
+    br {
+      @include rm(1220) {
+        display: none;
+      }
+    }
+  }
+
+  .x_price_current {
+    margin-right: 5px;
+    font-size: 45px;
+    letter-spacing: -1.9px;
+  }
+
+  &__timer {
+    margin-bottom: 15px;
+
+    @include rm(640) {
+      width: 50%;
+    }
+
+    @include rm(1024) {
+      width: 315px;
+      margin: 0;
+    }
+
+    @include rm(1220) {
+      width: 370px;
+    }
+  }
+
+  .input-wrap {
+    @include rm(1024) {
+      width: 100%;
+      max-width: 315px;
+      margin: 0;
+    }
+
+    @include rm(1220) {
+      max-width: 370px;
+    }
+  }
+
+  .timer {
+    display: block;
+  }
+
+  .timer__text {
+    margin: 0 0 15px;
+    font-size: 18px;
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
+
+  .timer__time {
+    text-align: center;
+
+    span {
+      padding: 7px 11px;
+      font-size: 29px;
+
+      &:nth-child(3),
+      &:nth-child(6) {
+        padding: 0 4px;
+      }
+    }
+  }
+
+  .form__note {
+    margin: 0;
+    color: #444444;
+    font-size: 16px;
+
+    @include rm(1024) {
+      position: absolute;
+      right: 50px;
+      bottom: 0;
+    }
+
+    @include rm(1220) {
+      right: 90px;
+    }
+  }
+
+  .quality {
+    @include rm(640) {
+      width: 115px;
+    }
+
+    @include rm(1024) {
+      width: 105px;
+    }
+
+    @include rm(1220) {
+      width: 115px;
+    }
+  }
+
+  .form__button {
+    @include rm(1024) {
+      width: 100%;
+      max-width: 315px;
+      margin: 0;
+    }
+
+    @include rm(1220) {
+      max-width: 370px;
+    }
+  }
+}
+
+.action__quality {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+
+  @include rm(640) {
+    width: 50%;
+    margin: 0;
+    order: 1;
+    flex-wrap: wrap;
+  }
+
+  @include rm(768) {
+    padding: 0 20px;
+  }
+
+  @include rm(1024) {
+    width: auto;
+    padding: 0;
+    order: 0;
+  }
+}

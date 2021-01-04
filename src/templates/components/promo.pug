@@ -20,7 +20,7 @@
           picture
             source(srcset="img/prod90.webp" type="image/webp")
             img.promo-prod--desk(src="img/prod90.png" alt="prod")
-          .medal.animation-medal
+          .medal.promo__medal.animation-medal
             picture
               source(srcset="img/icon-choice.webp" type="image/webp")
               img(src="img/icon-choice.png" alt="prod")
@@ -54,29 +54,28 @@
             svg.promo__list-icon
               use(xlink:href="#bullet")
             p За&nbsp;1&nbsp;курс
-
       .form.promo__form
         .form__content
           .form__top
-          p.form__title.text-bold Внимание!
-          p.form__subtitle Только сегодня 
-            br
-            |
-            span.nowrap.date-0.text-accent(data-format="dd monthFull")
-            | , цена
-          .form__price.price
-            //- .price-old
-            //-   span.price__title Старая цена
-            //-   .price__count                                
-            //-     span.x_price_previous 10890
-            //-     span.x_currency грн.
-            //- span.price__div
-            .price-new
-              //- span.price__title Новая цена
-              .price__count
-                span.x_price_current 196
-                span.x_currency грн.
-          form.x_order_form.form__main(action="/submit" method="post")
+            p.form__title.text-bold Внимание!
+            p.form__subtitle Только сегодня 
+              br
+              |
+              span.nowrap.date-0.text-accent(data-format="dd monthFull")
+              | , цена
+            .form__price.price
+              //- .price-old
+              //-   span.price__title Старая цена
+              //-   .price__count                                
+              //-     span.x_price_previous 10890
+              //-     span.x_currency грн.
+              //- span.price__div
+              .price-new
+                //- span.price__title Новая цена
+                .price__count
+                  span.x_price_current 196
+                  span.x_currency грн.
+          form.x_order_form(action="/submit" method="post")
             .input-wrap.input-wrap--name
               svg.input-icon.input-icon--user
                 use(xlink:href="#icon_user")

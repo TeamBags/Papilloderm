@@ -1,10 +1,18 @@
 .promo {
   @include rm(1024) {
-    padding: 50px 0;
+    padding: 30px 0;
   }
 
   @include rm(1220) {
     padding: 70px 0 60px;
+  }
+
+  @include rm(1440) {
+    max-height: 643px;
+  }
+
+  .x_order_form {
+    margin-bottom: 15px;
   }
 }
 
@@ -52,16 +60,24 @@
 
   @include rm(1024) {
     width: 360px;
-    margin-bottom: 0;
+    margin: 0;
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: 0;
     order: 0;
   }
 
   @include rm(1220) {
-    width: 468px;
+    width: 464px;
     top: -70px;
+  }
+
+  @include rm(1350) {
+    left: -74px;
+  }
+
+  @include rm(1440) {
+    left: -114px;
   }
 }
 
@@ -74,6 +90,10 @@
   @include rm(1220) {
     width: 360px;
     margin-right: 40px;
+  }
+
+  @include rm(1350) {
+    margin-right: 70px;
   }
 }
 
@@ -98,7 +118,7 @@
   }
 
   @include rm(1220) {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 }
 
@@ -138,19 +158,23 @@
   text-align: center;
 
   @include rm(1024) {
-    margin-bottom: 30px;
     text-align: left;
+  }
+
+  @include rm(1220) {
+    margin-bottom: 45px;
   }
 }
 
 .form {
+  width: 100%;
   max-width: 270px; // убрать
   text-align: center;
 }
 
 .form__content {
-  margin-bottom: 15px;
-  padding: 28px 22px 14px;
+  margin-bottom: 13px;
+  padding: 25px 22px 14px;
   border-radius: 10px;
   border: 2px solid rgba(251, 141, 0, 0.3);
   background-color: #ffffff;
@@ -160,13 +184,12 @@
 
 .form__title {
   margin-bottom: 10px;
-  font-size: 26px;
+  font-size: 30px;
 }
 
 .form__subtitle {
   margin-bottom: 10px;
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 18px;
 }
 
 .form__free {
@@ -252,7 +275,7 @@
   }
 
   .x_price_current {
-    margin-right: 2px;
+    margin-right: 5px;
     letter-spacing: -1.4px;
   }
 
@@ -277,12 +300,13 @@
 
   &:hover,
   &:focus {
-    box-shadow: inset 0 0 5px #c0c0c0;
+    border: 1px solid rgba($color: $main-orange, $alpha: 0.3);
+    box-shadow: inset 0 0 5px rgba($color: $main-orange, $alpha: 0.3);
   }
 }
 
 .input-wrap {
-  margin-bottom: 15px;
+  margin-bottom: 11px;
 }
 
 .input-wrap--name,
@@ -334,7 +358,6 @@
 }
 
 .form__note {
-  margin-bottom: 14px;
   display: block;
   font-size: 15px;
   color: #777777;
@@ -376,6 +399,35 @@
   position: absolute;
   top: 0;
   right: 0;
+
+  @include rm(768) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.promo__medal {
+  @include rm(640) {
+    top: -30px;
+  }
+
+  @include rm(1024) {
+    top: 0px;
+  }
+
+  @include rm(1220) {
+    top: -42px;
+    right: 10px;
+  }
+
+  @include rm(1350) {}
+
+  @include rm(1440) {
+    width: 114px;
+    height: 114px;
+    top: -61px;
+    right: 28px;
+  }
 }
 
 .animation-medal {
@@ -414,7 +466,6 @@
 
   @include rm(1024) {
     display: block;
-
   }
 }
 
@@ -422,15 +473,25 @@
   position: relative;
 
   @include rm(1024) {
-    width: 350px;
+    width: 330px;
     position: absolute;
-    bottom: -206px;
+    bottom: -195px;
   }
 
   @include rm(1220) {
-    width: 400px;
+    width: 350px;
     bottom: -100px;
-    left: 50px;
+    left: 135px;
+  }
+
+  @include rm(1350) {
+    left: 155px;
+  }
+
+  @include rm(1440) {
+    width: 433px;
+    left: 145px;
+    bottom: -150px;
   }
 }
 
@@ -491,6 +552,10 @@
   @include rm(1220) {
     left: calc(50% - 60px);
     bottom: -110px;
+  }
+
+  @include rm(1350) {
+    left: calc(50% - 78px);
   }
 }
 
@@ -554,6 +619,10 @@
   width: 26px;
   height: 26px;
   margin-right: 10px;
+
+  @include rm(1024) {
+    margin-right: 30px;
+  }
 }
 
 .twentytwenty-container img {
@@ -562,7 +631,7 @@
 }
 
 .twentytwenty-right-arrow::before {
-  content: 'Как изменится ваша кожа после курса Papilloderm';
+  // content: 'Как изменится ваша кожа после курса Papilloderm';
   color: #444;
   font-size: 12px;
   font-weight: 400;
@@ -577,7 +646,7 @@
   z-index: 99;
   position: absolute;
   left: calc(50% - 16px);
-  top: 50px;
+  top: 55px;
   transform: translateX(-50%);
   text-shadow: 0 0 0 #000;
   opacity: 0;
@@ -599,7 +668,7 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 100%);
 
   @include rm(1220) {
-    height: 230px;
+    height: 130px;
     bottom: 38px;
   }
 }
@@ -612,13 +681,13 @@
 
 
   @include rm(1220) {
-    height: 285px;
+    height: 330px;
     top: 38px;
   }
 }
 
 .twentytwenty-handle {
-  margin-left: -28px;
+  margin-left: -18px;
   border: none;
   background-color: $main-red;
   box-shadow: 0px 0px 0 5px rgba(255, 255, 255, 0.3);
@@ -626,6 +695,9 @@
   @include rm(1220) {
     width: 57px;
     height: 57px;
+    margin-left: -28px;
+    top: 250px;
+    box-shadow: 0px 0px 0 9px rgba(255, 255, 255, 0.3);
   }
 }
 
