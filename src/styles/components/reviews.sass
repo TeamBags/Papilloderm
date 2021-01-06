@@ -1,0 +1,468 @@
+.reviews
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 1170px
+		background-color: #dbdbdb;
+		height: 1px
+	+rm(1220)
+		padding: 84px 0 90px
+	&__title
+		+rm(768)
+			margin-bottom: 15px
+		+rm(1220)
+			margin-bottom: 20px
+	&-content
+		max-width: 340px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 25px
+		+rm(640)
+			max-width: 100%
+			margin-left: 0
+			margin-right: 0
+		+rm(768)
+			margin-bottom: 25px
+		+rm(1220)
+			margin-bottom: 30px
+	&-top
+		display: flex
+		align-items: center
+	&-box
+		position: relative
+		box-shadow: 0 0 6px rgba(36, 66, 137, 0.1)
+		border-radius: 5px
+		background-color: #ffffff
+		display: flex !important
+		flex-direction: column
+		align-items: center
+		padding-bottom: 15px
+		padding-top: 15px
+		margin-top: 20px
+		margin-bottom: 18px
+		+rm(640)
+			padding: 20px 0px 25px
+		+rm(1024)
+			box-shadow: 0 0 10px rgba(36, 66, 137, 0.1)
+		+rm(1220)
+			box-shadow: 0 0 15px rgba(36, 66, 137, 0.1)
+			padding: 30px 0px 38px
+		&__img
+			position: relative
+			display: flex
+			justify-content: center
+			z-index: 0
+			margin-right: 15px
+			+rm(1220)
+				margin-right: 25px
+			img
+				border: 2px solid #e47137
+				background-color: #e47137
+				border-radius: 50%
+				width: 90px
+				height: 90px
+				+rm(1220)
+					width: 104px
+					height: 104px
+			&--bcolor
+				position: relative
+				margin-right: -30px
+				z-index: -1
+				border: 3px solid #fa7070 !important
+				background-color: #fa7070 !important
+			&--text
+				position: relative
+				&::before
+					content: 'до'
+					position: absolute
+					left: -30px
+					top: 50%
+					transform: translateY(-28%)
+					color: #444444
+					font-size: 16px
+					line-height: 1
+				&::after
+					content: 'после'
+					position: absolute
+					right: -54px
+					top: 50%
+					transform: translateY(-28%)
+					color: #444444
+					font-size: 16px
+					line-height: 1
+		&__name
+			color: #222222
+			font-size: 18px
+			font-weight: bold
+			line-height: 1
+			+rm(1220)
+				font-size: 20px
+		&__city
+			margin-top: 5px
+			color: #444444
+			font-size: 15px
+			line-height: 1
+			font-weight: 400
+			+rm(1220)
+				margin-top: 6px
+				font-size: 16px
+	&-text
+		&-body
+			margin-top: 12px
+			position: relative
+			text-align: center
+			max-height: 200px
+			overflow: hidden
+			transition: .3s
+			position: relative
+			width: 100%
+			+rm(640)
+				max-height: 190px
+			+rm(1024)
+				max-height: 210px
+				margin-top: 14px
+			+rm(1220)
+				margin-top: 16px
+
+		&__annotation
+			font-size: 16px
+			font-weight: 700
+			line-height: normal
+			background-color: #fff5e8
+			color: #222222
+			height: 65px
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-left: 10px
+			padding-right: 10px
+			+rm(1024)
+				font-size: 19px
+				line-height: 23px
+			+rm(1220)
+				font-size: 18px
+				line-height: 24px
+				height: 75px
+		&__item
+			margin-top: 7px
+			color: #444444
+			font-size: 17px
+			font-weight: 400
+			line-height: normal
+			width: 100%
+			padding-left: 15px
+			padding-right: 15px
+			+rm(640)
+				line-height: 26px
+				padding-left: 20px
+				padding-right: 20px
+			+rm(1024)
+				font-size: 18px
+				line-height: 28px
+			+rm(1220)
+				margin-top: 10px
+				padding-right: 25px
+				padding-left: 25px
+		&__btn
+			position: absolute
+			bottom: -18px
+			left: 50%
+			transform: translateX(-50%)
+			width: 36px
+			height: 36px
+			border-radius: 50%
+			background-color: #e47137
+			cursor: pointer
+			transition: .3s
+			&:before, &:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				background: #fff
+				opacity: 1
+				transition: .3s
+			&::before
+				width: 2px
+				height: 16px
+			&:after
+				height: 2px
+				width: 16px
+			&:hover
+				background-color: #ec753a
+	.arrow-left, .arrow-right
+		top: 25px
+		transform: none
+		display: block !important
+		+rm(1315)
+			top: 50%
+			transform: translateY(-100%)
+	.arrow-left
+		left: 3px
+		z-index: 5
+		+rm(1315)
+			left: -65px
+	.arrow-right
+		right: 3px
+		+rm(1315)
+			right: -65px
+.shadow 
+	position: absolute
+	width: 100%
+	height: 150px
+	bottom: 0
+	left: 0
+	opacity: 1
+	-webkit-transition: opacity 1s
+	transition: opacity 1s
+	background-image: -webkit-gradient(linear,left bottom,left top,from(#fff),to(rgba(255,255,255,0)))
+	background-image: linear-gradient(to top,#fff 0%,rgba(255,255,255,0) 100%)
+.text-open
+	.reviews-text-body
+		max-height: 800px
+	.reviews-text__btn
+		background-color: #81a413
+		&:before
+			opacity: 0
+	.shadow
+		opacity: 0
+
+.slick-dots
+	margin-top: 10px
+	+rm(640)
+		margin-top: 0px
+.arrow-left, .arrow-right
+	fill:#d6d3d3
+	transition: .2s
+	position: absolute
+	cursor: pointer
+	&:hover
+		fill:#e45326
+.slick-slide 
+	outline: 0
+	margin-left: 5px
+	margin-right: 5px
+	+rm(1024)
+		margin-right: 10px
+		margin-left: 10px
+	+rm(1220)
+		margin-right: 15px
+		margin-left: 15px
+.slick-list
+	margin-left: -5px
+	margin-right: -5px
+	+rm(1024)
+		margin-left: -10px
+		margin-right: -10px
+	+rm(1220)
+		margin-left: -15px
+		margin-right: -15px
+
+.reviews__btn
+	max-width: 370px
+	margin-left: auto
+	margin-right: auto
+	font-size: 22px
+.reviews
+	&-form__file
+			display: flex
+			align-items: center
+			cursor: pointer
+	&-form__file-img
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 65px
+		height: 65px
+		flex-shrink: 0
+		border-radius: 50%
+		box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.06)
+		border: 1px solid #e1e1e1
+		background-color: #eef2f7
+		background-image: url(../img/file-icon.png)
+		background-size: auto auto
+		background-repeat: no-repeat
+		background-position: center
+		
+	&-form__file-text
+		color: #666666
+		font-size: 14px
+		line-height: 18px
+		text-decoration: underline
+		margin-left: 12px
+		+rm(1220)
+			font-size: 16px
+			margin-left: 15px
+	&-form__checkmark-icon
+		display: none
+.reviews .visually-hidden 
+	position: absolute!important
+	clip: rect(1px,1px,1px,1px)
+	padding: 0!important
+	height: 1px!important
+	width: 1px!important
+	overflow: hidden
+.think
+	display: flex
+	flex-direction: column
+	align-items: center
+	+rm(480)
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+	+rm(1024)
+		border-radius: 5px
+		border: 0
+		background-color: #ffffff
+		// padding: 20px
+	+rm(1220)
+		// padding: 40px 70px 25px
+	&__input
+		box-shadow: 2px 4px 4px rgba(3, 3, 3, 0.05)
+		border-radius: 30px
+		border: 1px solid #e4e2e2
+		background-color: #ffffff
+		padding: 20px 10px 20px 48px
+		color: #444444
+		font-size: 16px
+		width: 100%
+		transition: .5s
+		&:hover, &:focus, &:active
+			box-shadow: none
+	&__box 
+		position: relative
+		margin-bottom: 10px
+		width: 100%
+		max-width: 400px
+		+rm(480)
+			max-width: 100%
+			width: 49%
+		+rm(1024)
+			width: 24%
+			margin-bottom: 20px
+		+rm(1220)
+			margin-bottom: 25px
+		&:before
+			content: ''
+			position: absolute
+			left: 18px
+			top: 50%
+			transform: translateY(-50%)
+	&__name
+		&:before
+			background: url(../img/icon_name.png) no-repeat center / contain
+			width: 19px
+			height: 23px
+	&__age
+		&:before
+			background: url(../img/icon__age.png) no-repeat center / contain
+			width: 22px
+			height: 20px
+	&__city
+		&:before
+			background: url(../img/icon__city.png) no-repeat center / contain
+			width: 18px
+			height: 26px
+	&__text
+		position: relative
+		margin-bottom: 15px
+		width: 100%
+		max-width: 400px
+		+rm(480)
+			max-width: 100%
+		+rm(1024)
+			margin-bottom: 20px
+		+rm(1220)
+			margin-bottom: 25px
+		&:before
+			content: ''
+			position: absolute
+			left: 18px
+			top: 15px
+			background: url(../img/icon__mail.png) no-repeat center / contain
+			width: 21px
+			height: 21px
+	&__btn
+		max-width: 220px
+		margin-left: auto
+		margin-right: auto
+textarea
+	padding: 10px
+	padding-left: 48px
+	padding-top: 15px
+	height: 117px
+	width: 100%
+	box-shadow: inset 2px 3px 5px rgba(34, 35, 39, 0.09)
+	border-radius: 5px
+	border: 1px solid #dedddd
+	background-color: #ffffff
+	color: #666666
+	font-family: "Open Sans"
+	font-size: 16px
+	display: block
+	transition: .5s
+	resize: none
+	&:hover, &:focus, &:active
+		box-shadow: none
+.feedback-modal
+	width: 100%
+	height: 100%
+	background-color: rgba(255, 255, 255, .9)	
+	box-shadow: 0 0 20px rgba(0, 0, 0, .3)
+	border-radius: 5px
+	+rm(768)
+		width: 460px
+		margin-left: auto
+		margin-right: auto
+.feedback-modal__inner 
+	color: #222
+	text-align: center
+	z-index: 21
+	padding: 20px
+	border-radius: 5px
+	width: 100%
+	background-color: #fff
+	+rm(768)
+		padding: 23px 50px 25px;
+.feedback-modal__title 
+	position: relative
+	margin-bottom: 12px
+	padding-top: 0px
+	font-size: 22px
+	font-weight: 700
+.feedback-modal__text 
+	font-size: 18px
+	font-weight: 300
+.reviews__btn, .think, .feedback-modal
+	max-height: 0px
+	transition: .5s
+	overflow: hidden
+.feedback-modal
+	transition: box-shadow 1s, max-height .5s
+	&.active-feed
+		overflow: visible;
+.active-feed
+	max-height: 800px
+.reviews__btn
+	padding: 0
+	&.active-feed
+		padding: 18.5px 0;
+.think
+	padding: 0
+	&.active-feed
+		+rm(1024)
+			padding: 20px;
+			border: 1px solid #e3e3e3
+		+rm(1220)
+			padding: 40px 70px 25px
+.rloaded
+	.reviews-form__file-img
+		background: none
+		
+
