@@ -1,163 +1,101 @@
 export default () => {
-$(document).ready(function () {
-  $('.reviews__slider').slick({
-    dots: false,
-    arrows: true,
+  $(".reviews-content").on("afterChange", function (
+    event,
+    slick,
+    currentSlide
+  ) {
+    $(this)
+      .find(".slick-slide.text-open")
+      .not(".slick-active")
+      .removeClass("text-open");
+  });
+  $(".reviews-text__btn").on("click", function () {
+    this.parentElement.classList.toggle("text-open");
+    $(".reviews-content").find(".slick-slide.slick-active").height("auto");
+    $(".reviews-content").find(".slick-list").height("auto");
+  });
+  $(".reviews-content").slick({
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
-    responsive: [{
-        breakpoint: 1220,
+    arrows: true,
+    dots: true,
+    prevArrow:
+      '<svg class="arrow-left" xmlns="http://www.w3.org/2000/svg" width="17" height="29" viewBox="0 0 17 29"><defs><linearGradient id="sppxa" x1="17.02" x2=".02" y1="15.01" y2="14.01" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#12a89e"/><stop offset="1" stop-color="#86bf40"/></linearGradient></defs><g><g ><path  d="M13.216 28.374L.666 16.05a2.15 2.15 0 0 1 0-3.08L13.216.647a2.246 2.246 0 0 1 3.138 0 2.15 2.15 0 0 1 0 3.08L5.372 14.51l10.982 10.783a2.15 2.15 0 0 1 0 3.08 2.25 2.25 0 0 1-3.138 0z"/><path  d="M13.216 28.374L.666 16.05a2.15 2.15 0 0 1 0-3.08L13.216.647a2.246 2.246 0 0 1 3.138 0 2.15 2.15 0 0 1 0 3.08L5.372 14.51l10.982 10.783a2.15 2.15 0 0 1 0 3.08 2.25 2.25 0 0 1-3.138 0z"/><path  d="M13.216 28.374L.666 16.05a2.15 2.15 0 0 1 0-3.08L13.216.647a2.246 2.246 0 0 1 3.138 0 2.15 2.15 0 0 1 0 3.08L5.372 14.51l10.982 10.783a2.15 2.15 0 0 1 0 3.08 2.25 2.25 0 0 1-3.138 0z"/></g></g></svg>',
+    nextArrow:
+      '<svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" width="17" height="29" viewBox="0 0 17 29"><g><g><path  d="M3.79.62l12.57 12.32c.002 0 .003.002.004.003.868.85.868 2.23 0 3.08L3.791 28.347a2.258 2.258 0 0 1-3.144 0 2.149 2.149 0 0 1 0-3.082L11.65 14.483.647 3.7a2.147 2.147 0 0 1 0-3.08 2.252 2.252 0 0 1 3.144 0z"/></g></g></svg>',
+    responsive: [
+      {
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
-        }
+          slidesToScroll: 2,
+        },
       },
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: {
-          speed: 600,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           adaptiveHeight: true
-        }
-      }
-    ]
-  });
+        },
+      },
+    ],
+	});
+	var inputFile = $(".input-file");
+	var labelFile = $(".reviews-form__file");
+	var fileText = $(".reviews-form__file-text");
+	var fileImg = $(".reviews-form__file-img img");
+	var fileIcon = $(".reviews-form__checkmark-icon");
+	var fileFlag = true;
+	inputFile.change(function (e) {
+		if (inputFile.val() && fileFlag) {
+			fileText.html("Фото загружено!");
+			fileImg.hide();
+			fileIcon.show();
+			labelFile.addClass("rloaded");
+			fileFlag = false;
+		}
+	});
+	inputFile.click(function () {
+		if (!fileFlag) {
+			return false;
+		}
+	});
+	
+	$( ".reviews__btn" ).click(function() {
+		$('.think').addClass('active-feed');
+		$(this).removeClass('active-feed');
+	});
+	$('.think__btn').click(function (event) {
+    let iName = $(".name__input").val();
+    let iSname = $(".age__input").val();
+    let iCity = $(".city__input").val();
+    let iMassage = $(".inputText").val();
+    if (iName == "" || iSname == "" || iCity == "" || iMassage == "") {
+    } else {
+			event.preventDefault();
+			$('.feedback-modal').addClass('active-feed');
+			setTimeout(function() {
+
+			$('.feedback-modal').removeClass('active-feed');
+			}, 3000);
+			fileText.html('Загрузить ваше фото');
+			labelFile.removeClass('rloaded');
+			$('.think__input').val('');
+			$('.inputText').val('');
+			$('.think').removeClass('active-feed');
+			$('.reviews-form__checkmark-icon').hide()
+    }
+
+
+
 });
-
-
-  $(document).ready(function () {
-
-  var toggleFormBtn = $('.toggle-form-btn');
-  var reviewsBottom = $('.reviews__bottom');
-  var reviewsCta = $('.feedback');
-  var reviewsInputsWrap = $('.feedback__form__field-wrap');
-  var inputFile = $('.input-file');
-  var labelFile = $('.feedback__form__file');
-  var reviewsInput = $('.reviews-input');
-  var reviewsInputText = $('.reviews-input-text');
-  var reviewsInputTextarea = $('.feedback__form__textarea');
-  var reviewsInputTextareaJS = document.querySelector('.feedback__form__textarea');
-  var reviewsInputName = $('.feedback__form__input-name');
-  var reviewsPopup = $('.reviews-popup');
-  var fileText = $('.feedback__form__file-text');
-  var fileImg = $('.feedback__form__file-img img');
-  var fileIcon = $('.feedback__form__checkmark-icon');
-  var fileFlag = true;
-
-  reviewsInputTextareaJS.value = '';
-  reviewsInputTextarea.on('input', function () {
-    if ($(this).val().trim().length > 0) {
-      $(this).addClass('o-auto');
-    } else {
-      $(this).removeClass('o-auto');
-    }
-  });
-  inputFile.change(function (e) {
-    if (inputFile.val() && fileFlag) {
-      fileText.html('Фото загружено!');
-      fileImg.hide();
-      fileIcon.show();
-      labelFile.addClass('rloaded');
-      fileFlag = false;
-    }
-  });
-  reviewsInputText.on('input', function () {
-    var that = this;
-    setTimeout(function () {
-      var res = /[^a-zA-Zа-яА-ЯїЇєЄіІёЁ ]/g.exec(that.value);
-      that.value = that.value.replace(res, '');
-
-      if (that.value.replace(res, '').length === 0) {
-        that.parentElement.classList.add('invalid');
-        that.parentElement.classList.remove('valid');
-      } else {
-        that.parentElement.classList.remove('invalid');
-        that.parentElement.classList.add('valid');
-      }
-    }, 0);
-  });
-  reviewsInputTextareaJS.addEventListener('input', function () {
-    var that = this;
-    if (that.value.length === 0) {
-      that.parentElement.classList.add('invalid');
-      that.parentElement.classList.remove('valid');
-    } else {
-      that.parentElement.classList.remove('invalid');
-      that.parentElement.classList.add('valid');
-    }
-  });
-  inputFile.click(function () {
-    if (!fileFlag) {
-      return false;
-    }
-  });
-
-  toggleFormBtn.on('click', function () {
-    toggleFormBtn.hide();
-    reviewsCta.show();
-  });
-
-  $('.feedback__form').submit(function () {
-    if (reviewsInputTextarea.val().length !== 0 && reviewsInputName.val().length !== 0) {
-      reviewsCta.hide();
-      toggleFormBtn.show();
-      reviewsPopup.fadeIn();
-      event.preventDefault();
-      setTimeout(function () {
-        reviewsPopup.fadeOut();
-      }, 2000);
-      fileFlag = true;
-      reviewsInput.val('');
-      fileText.html('Загрузить ваше фото');
-      $('.feedback__star').removeClass('hover');
-      $('.feedback__star').removeClass('selected');
-      fileImg.show();
-      fileIcon.hide();
-      labelFile.removeClass('rloaded');
-      reviewsInputsWrap.removeClass('invalid');
-      reviewsInputsWrap.removeClass('valid');
-      $('.feedback__form__star').removeClass('filled');
-
-    } else {
-      reviewsInputsWrap.each(function (i) {
-        if (!reviewsInputsWrap[i].classList.contains('valid')) {
-          reviewsInputsWrap[i].classList.add('invalid');
-        }
-      });
-      event.preventDefault();
-    }
-  });
-});
-
-var starE = $('.feedback__star'),
-          stars = document.querySelectorAll('.feedback__star'); //  Stars on mouse over
-
-      starE.on('mouseover', function (e) {
-        var onStar = parseInt($(e.target).data('value'), 10);
-
-        for (var i = 0; i < stars.length; i++) {
-          $(stars[i]).removeClass('hover');
-        }
-
-        for (var _i = 0; _i < onStar; _i++) {
-          $(stars[_i]).addClass('hover');
-        }
-      }).on('mouseout', function () {
-        for (var i = 0; i < stars.length; i++) {
-          $(stars[i]).removeClass('hover');
-        }
-      }); //  Stars on click
-
-      starE.on('click', function (e) {
-        var onStar = parseInt($(e.target).data('value'), 10);
-
-        for (var i = 0; i < stars.length; i++) {
-          $(stars[i]).removeClass('selected');
-        }
-
-        for (var _i2 = 0; _i2 < onStar; _i2++) {
-          $(stars[_i2]).addClass('selected');
-        }
-      });
-    };
+};
