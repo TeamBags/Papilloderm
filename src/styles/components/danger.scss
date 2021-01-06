@@ -1,0 +1,291 @@
+.danger {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__top {
+    margin-bottom: 30px;
+
+    @include rm(640) {
+      margin-bottom: 35px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    @include rm(1024) {
+      display: block;
+      position: relative;
+    }
+
+    @include rm(1220) {
+      margin-bottom: 75px;
+    }
+  }
+
+  &__define {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.5;
+
+    @include rm(1024) {
+      max-width: 450px;
+      margin-bottom: 40px;
+    }
+
+    @include rm(1220) {
+      max-width: 575px;
+    }
+  }
+
+  &__img {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    position: relative;
+
+    @include rm(640) {
+      max-width: 270px;
+      margin: 0;
+      order: 1;
+    }
+
+    @include rm(768) {
+      max-width: 330px;
+    }
+
+    @include rm(1024) {
+      max-width: 474px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__note {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 18px;
+  }
+}
+
+.promoting {
+  @include rm(640) {
+    max-width: 240px;
+  }
+
+  @include rm(1024) {
+    max-width: none;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+
+    @include rm(640) {
+      text-align: left;
+    }
+
+    @include rm(1024) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    max-width: 345px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include rm(1024) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+
+      @include rm(1024) {
+        margin-bottom: 19px;
+      }
+    }
+  }
+
+  &__list-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+}
+
+.quote {
+  padding: 30px 20px 20px;
+  border-radius: 20px;
+  border: 4px solid #ea4949;
+  position: relative;
+
+  &::before,
+  &::after {
+    width: 80px;
+    height: 40px;
+    content: "";
+    position: absolute;
+    background-color: #fff;
+
+    @include rm(1024) {
+      width: 163px;
+      height: 73px;
+      background-size: 47px;
+    }
+
+  }
+
+  &::before {
+    background-image: url(../img/icon-quote.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 30px;
+    top: -15px;
+    left: -5px;
+
+    @include rm(1024) {
+      top: -20px;
+    }
+  }
+
+  &::after {
+    background-image: url(../img/icon-quote.png);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 30px;
+    bottom: -15px;
+    right: -5px;
+
+    @include rm(1024) {
+      bottom: -20px;
+    }
+
+  }
+
+  @include rm(1024) {
+    padding: 66px 70px 25px;
+  }
+
+  &__text {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    position: relative;
+
+    @include rm(1024) {
+      padding-bottom: 35px;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: #e1e1e1;
+
+      @include rm(640) {
+        max-width: 310px;
+      }
+
+      @include rm(1024) {
+        max-width: 400px;
+      }
+    }
+
+    @include rm(1024) {
+      font-size: 22px;
+    }
+  }
+}
+
+.doc {
+  max-width: 232px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include rm(480) {
+    max-width: none;
+    flex-wrap: nowrap;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+
+    @include rm(480) {
+      margin-right: 20px;
+    }
+
+  }
+
+  &__ava {
+    width: 90px;
+    margin-right: 10px;
+
+    @include rm(768) {
+      width: auto;
+    }
+  }
+
+  &__name {
+    margin-bottom: 3px;
+    font-size: 18px;
+  }
+
+  &__pos {
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  &__sign {
+    width: 80px;
+    margin-right: 10px;
+
+    @include rm(480) {
+      margin-right: 20px;
+    }
+
+    @include rm(768) {
+      width: 90px;
+    }
+
+    @include rm(1024) {
+      width: auto;
+    }
+
+  }
+
+  &__stamp {
+    width: 80px;
+
+    @include rm(768) {
+      width: 90px;
+    }
+
+    @include rm(1024) {
+      width: auto;
+    }
+  }
+}
