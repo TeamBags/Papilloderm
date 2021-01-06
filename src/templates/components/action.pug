@@ -1,45 +1,44 @@
 .action
-  .container
-    .action__content
-      .action__top
-        p.form__title.text-bold Внимание!
-        p.form__subtitle.form__subtitle--mob Только сегодня 
-          br
-          |
-          span.nowrap.date-0.text-accent(data-format="dd monthFull")
-          | , цена 
-          span.x_price_current 196
-          span.x_currency грн.
-      p.form__subtitle.form__subtitle--desk Только сегодня 
+  .action__content
+    .action__top
+      p.form__title.text-bold Внимание!
+      p.form__subtitle.form__subtitle--mob Только сегодня 
         br
         |
         span.nowrap.date-0.text-accent(data-format="dd monthFull")
         | , цена 
         span.x_price_current 196
         span.x_currency грн.
-      ul.action__quality
-        li.promo__quality-item
-          picture
-            source(srcset="img/icon-promo1.webp" type="image/webp")
-            img.quality(src="img/icon-promo1.png" alt="prod")
-        li.promo__quality-item
-          picture
-            source(srcset="img/icon-promo2.webp" type="image/webp")
-            img.quality(src="img/icon-promo2.png" alt="prod")
-        li.promo__quality-item
-          picture
-            source(srcset="img/icon-promo3.webp" type="image/webp")
-            img.quality(src="img/icon-promo3.png" alt="prod")
-      .action__timer
-        include timer
-      form.x_order_form.action__form(action="/submit" method="post")
-        .input-wrap.input-wrap--name
-          svg.input-icon.input-icon--user
-            use(xlink:href="#icon_user")
-          input.form__input(type="text" name="name" placeholder="Мое имя" required)
-        .input-wrap.input-wrap--tel
-          svg.input-icon.input-icon--tel
-            use(xlink:href="#icon_phone")
-          input.form__input(type="tel" name="phone" placeholder="Мой телефон" required)
-        button.form__button.btn Заказать Papilloderm
-        span.form__note *при оформлении заказа
+    p.form__subtitle.form__subtitle--desk Только сегодня 
+      br
+      |
+      span.nowrap.date-0.text-accent(data-format="dd monthFull")
+      | , цена 
+      span.x_price_current 196
+      span.x_currency грн.
+    ul.action__quality
+      li.promo__quality-item
+        picture
+          source(srcset="img/icon-promo1.webp" type="image/webp")
+          img.quality(src="img/icon-promo1.png" alt="prod")
+      li.promo__quality-item
+        picture
+          source(srcset="img/icon-promo2.webp" type="image/webp")
+          img.quality(src="img/icon-promo2.png" alt="prod")
+      li.promo__quality-item
+        picture
+          source(srcset="img/icon-promo3.webp" type="image/webp")
+          img.quality(src="img/icon-promo3.png" alt="prod")
+    .action__timer
+      include timer
+    form.x_order_form.action__form(action="/submit" method="post")
+      .input-wrap.input-wrap--name
+        svg.input-icon.input-icon--user
+          use(xlink:href="#icon_user")
+        input.form__input(type="text" name="name" placeholder="Мое имя" required)
+      .input-wrap.input-wrap--tel
+        svg.input-icon.input-icon--tel
+          use(xlink:href="#icon_phone")
+        input.form__input(type="tel" name="phone" placeholder="Мой телефон" required)
+      button.form__button.btn Заказать Papilloderm
+      span.form__note *при оформлении заказа

@@ -36,6 +36,39 @@
     @include rm(1024) {
       justify-content: space-between;
     }
+
+    @include rm(1220) {
+      padding-top: 83px;
+      padding-bottom: 45px;
+      position: relative;
+    }
+
+    &::before,
+    &::after {
+      @include rm(1220) {
+        width: 62px;
+        height: 550px;
+        content: "";
+        position: absolute;
+        top: 50%;
+      }
+    }
+
+    &::before {
+      transform: translateY(-50%);
+      left: calc(50% - 200px);
+      background: url(../img/bg-ellipse.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      transform: translateY(-50%) scale(-1);
+      left: calc(50% + 150px);
+      background: url(../img/bg-ellipse.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   &__prod {
@@ -48,11 +81,28 @@
     }
 
     @include rm(1024) {
-      width: 170px;
+      width: 131px;
       top: 50%;
       left: 50%;
       bottom: auto;
       transform: translate(-50%, -50%);
+    }
+
+    @include rm(1220) {
+      width: 131px;
+      top: 38px;
+      left: 50%;
+      bottom: auto;
+      transform: translate(-50%, 0);
+    }
+
+    @include rm(1350) {
+      left: 50%;
+    }
+
+    @include rm(1440) {
+      width: 131px;
+      left: 50%;
     }
 
     &--mob {
@@ -67,6 +117,16 @@
       @include rm(1024) {
         display: block;
       }
+    }
+  }
+
+  &__medal {
+    @include rm(1024) {
+      width: 102px;
+      height: 102px;
+      top: -37px;
+      left: -30px;
+      right: auto;
     }
   }
 }
@@ -85,6 +145,7 @@
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
   border-radius: 15px;
   background-color: #ffffff;
+  position: relative;
 
   @include rm(640) {
     max-width: 290px;
@@ -100,10 +161,47 @@
     padding: 0;
     box-shadow: none;
     border-radius: 0;
+    background-color: transparent;
   }
+
+  @include rm(1220) {
+    max-width: 474px;
+    flex-direction: row;
+    position: relative;
+    z-index: 5;
+  }
+
+
+  &::before {
+    content: "";
+    width: 40px;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background-color: $main-orange;
+
+    @include rm(1220) {
+      display: none;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @include rm(1220) {
+      margin-bottom: 34px;
+    }
+  }
+
 
   &:nth-child(3) {
     @include rm(640) {
+      margin-bottom: 0;
+    }
+
+    @include rm(1220) {
       margin-bottom: 0;
     }
   }
@@ -112,43 +210,66 @@
     @include rm(1024) {
       margin-right: 200px;
     }
+
+    .usual__box {
+      @include rm(1220) {
+        margin-right: 40px;
+        order: 0;
+      }
+    }
   }
 
-  &:not(:last-child) {
-    margin-bottom: 25px;
+  &:nth-child(even) {
+    .usual__box::after {
+      @include rm(1220) {
+        left: -30px;
+        right: auto;
+      }
+    }
   }
+
 
   &__box {
-    position: relative;
     order: 1;
 
     @include rm(1024) {
+      width: 100%;
+      min-height: 184px;
       padding: 20px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+      background-color: #fff;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
       border-radius: 15px;
     }
 
+    @include rm(1220) {
+      max-width: 288px;
+      min-height: 206px;
+      position: relative;
+    }
+
+
     &::before,
     &::after {
-      content: "";
-      position: absolute;
+      @include rm(1220) {
+        content: "";
+        position: absolute;
+      }
     }
 
     &::before {
       width: 4px;
       height: 40px;
-      left: 50%;
-      bottom: -38px;
+      top: 50%;
+      left: 0;
       background-color: $main-orange;
-      transform: rotate(90deg);
-
-      @include rm(1024) {
-        bottom: -19px;
-      }
+      transform: translateY(-50%);
     }
 
     &::after {
-      display: none;
       width: 17px;
       height: 1px;
       background-color: #e1e1e1;
@@ -171,6 +292,10 @@
     margin-bottom: 20px;
     flex-shrink: 0;
     position: relative;
+
+    @include rm(1220) {
+      margin: 0 40px 0 0;
+    }
 
     &::before,
     &::after {
