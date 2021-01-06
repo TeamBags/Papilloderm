@@ -1,6 +1,10 @@
 .danger {
   &__title {
     margin-bottom: 20px;
+
+    @include rm(1220) {
+      margin-bottom: 56px;
+    }
   }
 
   &__top {
@@ -20,7 +24,7 @@
     }
 
     @include rm(1220) {
-      margin-bottom: 75px;
+      margin-bottom: 80px;
     }
   }
 
@@ -63,6 +67,11 @@
       top: 0;
       right: 0;
     }
+
+    @include rm(1220) {
+      top: -35px;
+      right: 29px;
+    }
   }
 
   &__note {
@@ -70,6 +79,11 @@
     top: 5px;
     left: 0;
     font-size: 18px;
+
+    @include rm(1024) {
+      top: 23px;
+      left: 14px;
+    }
   }
 }
 
@@ -118,6 +132,10 @@
       @include rm(1024) {
         margin-bottom: 19px;
       }
+
+      @include rm(1220) {
+        margin-bottom: 15px;
+      }
     }
   }
 
@@ -125,6 +143,10 @@
     width: 20px;
     height: 20px;
     margin-right: 15px;
+
+    @include rm(1024) {
+      margin-right: 23px;
+    }
   }
 }
 
@@ -133,6 +155,10 @@
   border-radius: 20px;
   border: 4px solid #ea4949;
   position: relative;
+
+  @include rm(1024) {
+    padding: 54px 66px 19px;
+  }
 
   &::before,
   &::after {
@@ -177,9 +203,6 @@
 
   }
 
-  @include rm(1024) {
-    padding: 66px 70px 25px;
-  }
 
   &__text {
     padding-bottom: 20px;
@@ -189,7 +212,7 @@
     position: relative;
 
     @include rm(1024) {
-      padding-bottom: 35px;
+      padding-bottom: 30px;
     }
 
     &::before {
@@ -237,7 +260,9 @@
     @include rm(480) {
       margin-right: 20px;
     }
-
+    @include rm(1024) {
+      margin-right: 30px;
+    }
   }
 
   &__ava {
@@ -247,16 +272,29 @@
     @include rm(768) {
       width: auto;
     }
+
+    @include rm(1024) {
+      margin-right: 29px;
+    }
   }
 
   &__name {
     margin-bottom: 3px;
     font-size: 18px;
+
+    @include rm(1024) {
+      font-size: 22px;
+    }
   }
 
   &__pos {
     font-size: 16px;
     font-style: italic;
+
+    @include rm(1024) {
+      font-size: 18px;
+    }
+
   }
 
   &__sign {
@@ -273,6 +311,7 @@
 
     @include rm(1024) {
       width: auto;
+      margin-right: 39px;
     }
 
   }
