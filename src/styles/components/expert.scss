@@ -1,0 +1,188 @@
+.expert {
+  @include rm(1220) {
+    padding-top: 77px;
+    padding-bottom: 85px;
+  }
+
+  @include rm(1350) {
+    padding-bottom: 115px;
+    overflow: hidden;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    @include rm(1024) {
+      text-align: left;
+    }
+
+    @include rm(1220) {
+      margin-bottom: 43px;
+    }
+  }
+
+  &__content {
+    padding: 20px 30px;
+
+    @include rm(1024) {
+      max-width: 590px;
+      padding: 30px 40px 21px;
+    }
+
+    @include rm(1220) {
+      max-width: 625px;
+      padding: 53px 53px 21px;
+    }
+
+    &::after {
+      content: "";
+      width: 25px;
+      height: 35px;
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      background: url(../img/icon-quote2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include rm(1024) {
+        width: 44px;
+        height: 35px;
+        top: -20px;
+        right: 40px;
+      }
+    }
+  }
+
+  &__foto {
+    display: none;
+
+    @include rm(1024) {
+      width: 490px;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+    }
+
+    @include rm(1220) {
+      width: 623px;
+      bottom: -85px;
+    }
+
+    @include rm(1350) {
+      width: 673px;
+      bottom: -115px;
+      right: -111px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+
+    @include rm(1220) {
+      margin-bottom: 20px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      position: relative;
+
+      @include rm(768) {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+      }
+
+      @include rm(1024) {
+        margin-bottom: 10px;
+        padding-bottom: 20px;
+      }
+
+      @include rm(1220) {
+        margin-bottom: 4px;
+        padding-bottom: 33px;
+      }
+
+      &::before {
+        content: "";
+        width: 120px;
+        height: 1px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        background-color: #ccc;
+
+        @include rm(1024) {
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  .doc {
+    max-width: 180px;
+    justify-content: center;
+
+    @include rm(480) {
+      max-width: none;
+    }
+
+    @include rm(1024) {
+      justify-content: flex-start;
+    }
+  }
+
+  .doc__box {
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+
+    @include rm(480) {
+      margin-bottom: 0;
+    }
+
+    @include rm(640) {
+      width: auto;
+    }
+
+    @include rm(1220) {
+      margin-right: 48px;
+    }
+  }
+
+  .doc__name {
+    font-size: 22px;
+
+    @include rm(1220) {
+      margin-bottom: 6px;
+    }
+  }
+
+  .doc__pos {
+    display: block;
+    line-height: 1.2;
+    color: #666666;
+  }
+
+  .doc__sign,
+  .doc__stamp {
+    @include rm(768) {
+      width: 110px;
+    }
+
+    @include rm(1024) {
+      width: 90px;
+    }
+
+    @include rm(1220) {
+      width: 133px;
+    }
+  }
+}
