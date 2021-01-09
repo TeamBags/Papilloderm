@@ -10,7 +10,7 @@ function main() {
   scrollSmooth();
   banner();
   header();
-  // reviews();
+  reviews();
 }
 
 if (document.documentElement.clientWidth < 480) {

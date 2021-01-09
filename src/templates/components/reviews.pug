@@ -47,7 +47,7 @@ mixin review(slide)
       img: 'review_05.png',
       name: 'Владимир А.',
       age: '43 года',
-      text: 'Мне понравился Папилодерм.Все попиломы отпали за две недели. Главное придерживаться инструкции и всё будет ОК.Рекомендую!'
+      text: 'Мне понравился Папилодерм.Все попиломы отпали за две недели. Главное придерживаться инструкции и всё будет ОК. Рекомендую!'
     },
     {
       webp: 'review_06.webp',
@@ -80,9 +80,10 @@ mixin review(slide)
   ]
 
 
-section.block.reviews(id='reviews')
+section.block.reviews(id='reviews').bg-grey
     .container
-      h2.title.reviews__title Отзывы покупателей о Friocard
+      h2.title.reviews__title Что говорят покупатели о 
+        span.text-accent Papilloderm 
       .reviews-content
           each slide in reviewArray
             +review(slide)
@@ -105,7 +106,7 @@ section.block.reviews(id='reviews')
           input.visually-hidden.input-file.reviews-input(accept="image/*" id="file" type="file")
         .think__text
           textarea.inputText(name="message" placeholder="Ваше сообщение" required)
-        button.btnthink__btn Отправить
+        button.btn.think__btn Отправить
       .feedback-modal
         .feedback-modal__inner
           .feedback-modal__title Спасибо!
