@@ -1,4 +1,11 @@
 .warn {
+  @include rm(1024) {
+    padding: 60px 0;
+  }
+  @include rm(1220) {
+    padding: 90px 0;
+  }
+
   &__content {
     @include rm(1024) {
       position: relative;

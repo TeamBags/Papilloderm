@@ -17,6 +17,14 @@
 }
 
 .efficiency {
+  @include rm(1024) {
+    padding: 60px 0;
+  }
+
+  @include rm(1220) {
+    padding: 90px 0;
+  }
+
   &__title {
     @include rm(1220) {
       margin-bottom: 20px;

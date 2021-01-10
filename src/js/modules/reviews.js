@@ -100,6 +100,8 @@ export default () => {
       const slidesItem = slides[i].querySelector(".reviews-text__item");
       if (slidesBody.offsetHeight > slidesItem.offsetHeight) {
         slides[i].classList.add("empty-box");
+      } else {
+        slides[i].classList.remove("empty-box");
       }
     }
   }

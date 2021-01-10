@@ -1,95 +1,110 @@
 @include r(1023) {
   .banner {
-      display: none !important;
+    display: none !important;
   }
 }
 
 @include rm(1024) {
-    .banner {
-        position: fixed;
-        bottom: 0;
-        z-index: 30;
-        width: 100%;
-        padding: 10px 0;
-        color: white;
-        background-color: blue;
+  .banner {
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    background-color: $main-green;
 
-        .container {
-          padding-top: 0;
-          padding-bottom: 0;
-        }
-
-        &__wrapper {
-            display: flex;
-            align-items: center;
-        }
-
-        &__logo {
-          padding: 0 5px;
-          margin-right: 10px;
-        }
-
-        &__order-now {
-          position: relative;
-          padding: 0 20px 0 100px;
-          margin-right: 15px;
-          font-size: 24px;
-          line-height: 1;
-          font-weight: 700;
-          &::before {
-            position: absolute;
-            content: "-50%";
-            width: 78px;
-            height: 78px;
-            padding: 24px 2px;
-            top: calc(50% - 39px);
-            left: 0;
-            font-size: 30px;
-            line-height: 1;
-            font-weight: 700;
-            text-align: center;
-            color: white;
-            background: url(../img/mainform_plashka.png) no-repeat center center;
-            background-size: contain;
-          }
-          &::after {
-            position: absolute;
-            content: "";
-            width: 1px;
-            height: 100%;
-            top: 0;
-            right: 0;
-            background-color: grey;
-          }
-        }
-
-        .timer {
-            margin-right: auto;
-            br {
-              display: none;
-            }
-            &__text {
-              margin-right: 20px;
-            }
-            .tm {
-              color: black;
-              background-color: white;
-              border-color: grey;
-            }
-        }
+    .container {
+      padding-top: 0;
+      padding-bottom: 0;
     }
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__left {
+      display: flex;
+    }
+
+    &__logo {
+      padding: 0 5px;
+      transform: rotate(-60deg);
+    }
+
+    &__text {
+      margin-right: 15px;
+      padding: 0 20px 0 0;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+      }
+
+    }
+
+    .x_price_current {
+      margin-right: 3px;
+      font-size: 38px;
+    }
+
+    .x_currency {
+      font-size: 23px;
+    }
+
+    &__order-now {
+      margin-bottom: -20px;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .timer {
+      margin-right: 10px;
+
+      br {
+        display: none;
+      }
+
+      &__text {
+        max-width: 110px;
+        margin-right: 10px;
+      }
+
+      span {
+        color: #ffffff;
+      }
+    }
+  }
 }
 
 @include rm(1220) {
-    .banner {
-      &__logo {
-        padding: 0 15px;
-        margin-right: 20px;
-      }
-      &__order-now {
-        position: relative;
-        padding: 0 50px 0 100px;
-        margin-right: 50px;
-      }
+  .banner {
+    &__logo {
+      padding: 0 15px;
+      margin-right: 0;
     }
+
+    &__order-now {
+      position: relative;
+      padding: 0 50px 0 0;
+    }
+
+    &__text {
+      margin-right: 0;
+      padding-right: 50px;
+    }
+
+    .timer__text {
+      max-width: 180px;
+    }
+  }
 }
