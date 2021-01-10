@@ -1,22 +1,33 @@
 .reviews
 	overflow-x: hidden
 	position: relative
-	&::before
-		content: ''
-		position: absolute
-		bottom: 0
-		left: 50%
-		transform: translateX(-50%)
-		width: 1170px
-		background-color: #dbdbdb
-		height: 1px
+	// &::before
+	// 	content: ''
+	// 	position: absolute
+	// 	bottom: 0
+	// 	left: 50%
+	// 	transform: translateX(-50%)
+	// 	width: 1170px
+	// 	background-color: #dbdbdb
+	// 	height: 1px
 	+rm(1220)
-		padding: 84px 0
+		padding: 85px 0
 	&__title
 		+rm(768)
 			margin-bottom: 15px
 		+rm(1220)
 			margin-bottom: 20px
+	&__content
+		margin-bottom: 25px
+		+rm(480)
+			margin-bottom: 30px
+		+rm(768)
+			margin-bottom: 40px
+		+rm(1024)
+			margin-bottom: 75px
+		+rm(1220)
+			margin-bottom: 85px
+
 	&-content
 		max-width: 340px
 		margin-left: auto

@@ -82,32 +82,34 @@ mixin review(slide)
 
 section.block.reviews(id='reviews').bg-grey
     .container
-      h2.title.reviews__title Что говорят покупатели о 
-        span.text-accent Papilloderm 
-      .reviews-content
-          each slide in reviewArray
-            +review(slide)
+      .reviews__content
+        h2.title.reviews__title Что говорят покупатели о 
+          span.text-accent Papilloderm 
+        .reviews-content
+            each slide in reviewArray
+              +review(slide)
 
-      button.btn.reviews__btn.active-feed Оставить свой отзыв
-      form.think(action="#" method="POST")
-        .think__box.think__name
-          input.think__input.name__input(type="text" placeholder="Мое имя" required)
-        .think__box.think__age
-          input.think__input.age__input(type="text" placeholder="Мой возраст" required)
-        //- .think__box.think__city
-        //-   input.think__input.city__input(type="text" placeholder="Город" required)
-        .think__box.think__photo
-          label.reviews-form__file(for="file")
-            span.reviews-form__file-img
-              span.reviews-form__checkmark-icon
-                svg(height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg")
-                  path(d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" fill="#0f0")
-            span.reviews-form__file-text Загрузить ваше&nbsp;фото
-          input.visually-hidden.input-file.reviews-input(accept="image/*" id="file" type="file")
-        .think__text
-          textarea.inputText(name="message" placeholder="Ваше сообщение" required)
-        button.btn.think__btn Отправить
-      .feedback-modal
-        .feedback-modal__inner
-          .feedback-modal__title Спасибо!
-          .feedback-modal__text Ваш отзыв отправлен на модерацию
+        button.btn.reviews__btn.active-feed Оставить свой отзыв
+        form.think(action="#" method="POST")
+          .think__box.think__name
+            input.think__input.name__input(type="text" placeholder="Мое имя" required)
+          .think__box.think__age
+            input.think__input.age__input(type="text" placeholder="Мой возраст" required)
+          //- .think__box.think__city
+          //-   input.think__input.city__input(type="text" placeholder="Город" required)
+          .think__box.think__photo
+            label.reviews-form__file(for="file")
+              span.reviews-form__file-img
+                span.reviews-form__checkmark-icon
+                  svg(height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" fill="#0f0")
+              span.reviews-form__file-text Загрузить ваше&nbsp;фото
+            input.visually-hidden.input-file.reviews-input(accept="image/*" id="file" type="file")
+          .think__text
+            textarea.inputText(name="message" placeholder="Ваше сообщение" required)
+          button.btn.think__btn Отправить
+        .feedback-modal
+          .feedback-modal__inner
+            .feedback-modal__title Спасибо!
+            .feedback-modal__text Ваш отзыв отправлен на модерацию
+      include use

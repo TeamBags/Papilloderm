@@ -39,14 +39,16 @@
     }
 
     &::before {
-      content: "";
-      width: 1px;
-      height: 400px;
-      position: absolute;
-      left: 60px;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #ddd;
+      @include rm(1024) {
+        content: "";
+        width: 1px;
+        height: 400px;
+        position: absolute;
+        left: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ddd;
+      }
 
       @include rm(1024) {
         width: 62px;
