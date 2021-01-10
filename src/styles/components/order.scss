@@ -1,8 +1,10 @@
 .order {
+
   &__list {
     max-width: 270px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 30px;
 
     @include rm(640) {
       max-width: none;
@@ -11,9 +13,18 @@
       justify-content: space-around;
     }
 
+    @include rm(768) {
+      margin-bottom: 40px;
+    }
+
     @include rm(1024) {
+      margin-bottom: 70px;
       justify-content: space-between;
       align-items: stretch;
+    }
+
+    @include rm(1220) {
+      margin-bottom: 95px;
     }
   }
 
