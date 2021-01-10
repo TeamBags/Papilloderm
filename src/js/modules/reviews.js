@@ -71,6 +71,7 @@ export default () => {
     $('.think').addClass('active-feed');
     $(this).removeClass('active-feed');
   });
+
   $('.think__btn').click(function (event) {
     let iName = $(".name__input").val();
     let iSname = $(".age__input").val();
@@ -80,8 +81,8 @@ export default () => {
       event.preventDefault();
       $('.feedback-modal').addClass('active-feed');
       setTimeout(function () {
-
-        $('.feedback-modal').removeClass('active-feed');
+        $('.feedback-modal').hide();
+        $('.reviews-content').css('margin-bottom', '0');
       }, 3000);
       fileText.html('Загрузить ваше фото');
       labelFile.removeClass('rloaded');
