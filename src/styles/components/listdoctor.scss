@@ -1,29 +1,51 @@
 .listdoctor {
-  .container {
-    border-bottom: 1px solid grey;
+  @include rm(1024) {
+    padding-top: 35px;
   }
+
+  &__wrapper--left {
+    @include rm(1024) {
+      max-width: 680px;
+    }
+  }
+
   &__list {
     margin-bottom: 30px;
   }
+
   &__item {
     position: relative;
-    padding-left: 60px;
+    padding-left: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    &::before {
+
+    &-icon {
+      width: 26px;
+      height: 26px;
+      display: block;
       position: absolute;
-      content: "";
-      width: 46px;
-      height: 46px;
+      top: 50%;
       left: 0;
-      top: calc(50% - 23px);
-      border-radius: 50%;
-      border: 4px solid #c0e0c7;
-      background: green url(../img/icon_chek.svg) no-repeat center center;
-      background-size: 23px 19px;
+      transform: translateY(-50%);
+
+      @include rm(1024) {
+        margin-bottom: 28px;
+        position: static;
+        transform: translateY(0);
+      }
     }
   }
+
+  .doc__sign {
+    @include rm(1024) {
+      width: 150px;
+    }
+  }
+
   &__sign {
     position: relative;
     display: flex;
@@ -31,40 +53,80 @@
     align-items: center;
     padding-top: 30px;
     text-align: center;
+
     &::before {
-      position: absolute;
       content: "";
-      width: 40px;
-      height: 5px;
+      width: 120px;
+      height: 1px;
+      background-color: #d7d7d7;
+      position: absolute;
       top: 0;
-      left: calc(50% - 20px);
-      background-color: blue;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include rm(768) {
+        left: 0;
+        transform: translateX(0);
+      }
     }
+
     &--text {
       margin-bottom: 20px;
     }
   }
-  
+
   &__sign {
     flex-direction: row;
-    // flex-wrap: wrap;
-    &::before {
-      left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include rm(480) {
+      flex-wrap: nowrap;
+      text-align: left;
     }
+
+    @include rm(768) {
+      padding-top: 20px;
+      justify-content: flex-start;
+    }
+
     &--text {
+      width: 100%;
+      margin-bottom: 10px;
       flex-shrink: 0;
-      margin-bottom: 0;
-      margin-right: 10px;
+
+      @include rm(480) {
+        width: auto;
+        margin: 0 20px 0 0;
+      }
     }
+
     &--img {
-      max-width: 267px;
+      width: 80px;
       flex-shrink: 2;
+
+      @include rm(1024) {
+        width: 110px;
+      }
     }
   }
+
   &__name {
     margin-bottom: 5px;
     font-size: 24px;
     line-height: 26px;
+
+    @include rm(768) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__specialty {
+    line-height: 1.2;
+
+    @include rm(768) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -73,7 +135,7 @@
 @include rm(640) {
   .listdoctor {
     &__list {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -84,18 +146,22 @@
       position: relative;
       padding-bottom: 0;
     }
+
     &__wrapper {
       display: flex;
       align-items: flex-end;
+      justify-content: flex-end;
+
       picture {
         width: 250px;
         flex-shrink: 0;
         margin-right: 20px;
       }
     }
+
     &__doctor {
       position: absolute;
-      bottom: 0px;
+      bottom: -40px;
       width: 250px;
     }
   }
@@ -107,30 +173,27 @@
       position: relative;
       padding-top: 0;
     }
-    &__wrapper {
-      picture {
-        width: 300px;
-        margin-right: 30px;
-      }
-    }
+
     &__doctor {
-      bottom: 0;
+      bottom: -40px;
       width: 300px;
+      left: 10px;
     }
+
     &__list {
       display: flex;
       justify-content: space-between;
     }
+
     &__item {
-      width: 30%;
+      width: 100%;
+      max-width: 207px;
       padding-left: 0;
-      padding-top: 50px;
       line-height: 26px;
+
       &:not(:last-child) {
+        margin-right: 30px;
         margin-bottom: 0px;
-      }
-      &::before {
-        top: -23px;
       }
     }
   }
@@ -143,22 +206,33 @@
         width: 260px;
         margin-right: 70px;
       }
+
       &--left {
+        max-width: 798px;
         flex-grow: 1;
       }
     }
+
     &__doctor {
-      width: 340px;
-      left: -10px;
+      width: 337px;
+      left: 10px;
     }
+
     &__list {
-      margin-bottom: 20px;
+      margin-bottom: 35px;
     }
+
     &__item {
-      width: 230px;
+      flex-shrink: 0;
+
+      &:not(:last-child) {
+        margin-right: 95px;
+      }
     }
+
     &__sign {
-      padding-top: 20px;
+      padding-top: 0;
+
       &--text {
         margin-right: 35px;
       }
