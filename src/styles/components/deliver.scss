@@ -1,0 +1,158 @@
+.deliver {
+  padding-top: 20px;
+  padding-bottom: 25px;
+  display: none;
+
+  @include rm(1024) {
+    display: block;
+    padding-top: 90px;
+    padding-bottom: 25px;
+  }
+
+  @include rm(1220) {
+    padding-top: 140px;
+  }
+
+  @include rm(1350) {
+    padding-top: 140px;
+  }
+
+  @include rm(1440) {
+    padding-top: 190px;
+  }
+}
+
+.deliver__info {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.deliver__var {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 20px
+}
+
+.deliver__var--confid {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-left: 28px
+}
+
+.deliver__confid {
+  position: relative;
+  margin-bottom: 44px
+}
+
+.deliver__confid img {
+  position: absolute;
+  top: 38px;
+  left: 0
+}
+
+.deliver__operator {
+  width: 51%
+}
+
+.deliver__operator br {
+  display: none
+}
+
+.deliver__operator--info {
+  position: relative;
+  font-size: 18px;
+  line-height: 18px;
+  margin-right: 36px;
+  padding-left: 36px
+}
+
+.deliver__operator--info img {
+  position: absolute;
+  left: 0;
+  top: -5px
+}
+
+.deliver__operator--bold {
+  font-size: 21px;
+  font-weight: 500
+}
+
+.deliver__time {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 21px
+}
+
+.deliver__block,
+.deliver__images {
+  display: flex
+}
+
+.deliver__block {
+  padding: 32px 32px 28px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.deliver__images {
+  align-items: center;
+}
+
+.deliver__images--title {
+  margin-right: 40px;
+  font-size: 21px;
+  font-weight: 500;
+  display: block;
+}
+
+.deliver__images--second {
+  margin-left: 0;
+
+  @include rm(1024) {
+    margin-left: 30px
+  }
+}
+
+.delivery__title {
+  font-size: 21px;
+  font-weight: 500;
+  margin-right: 10px
+}
+
+.delivery__inner,
+.delivery__item {
+  display: flex
+}
+
+.delivery__item {
+  align-items: center;
+  padding: 0 20px;
+
+  &:nth-child(2) {
+    padding-right: 0;
+  }
+}
+
+.delivery__item:first-of-type {
+  position: relative;
+  border-right: 1px solid #d8d6d6
+}
+
+.delivery__icon {
+  margin-right: 10px
+}
+
+.delivery__label {
+  max-width: 65px;
+
+  @include rm(1220) {
+    max-width: none;
+    white-space: nowrap;
+  }
+}

@@ -7,6 +7,10 @@
     padding: 127px 0 77px;
   }
 
+  @include rm(1440) {
+    padding: 190px 0 77px;
+  }
+
   &__title {
     margin-bottom: 20px;
 
