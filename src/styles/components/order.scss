@@ -1,0 +1,167 @@
+.order {
+  &__list {
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include rm(640) {
+      max-width: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include rm(1024) {
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+
+  .box-shadow {
+    padding-top: 0;
+    box-shadow: none;
+
+    @include rm(1024) {
+      padding-top: 35px;
+      padding-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    }
+
+    &::before {
+      display: none;
+
+      @include rm(1024) {
+        display: block;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 20px;
+      position: absolute;
+      top: -36px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #e1e1e1;
+    }
+  }
+
+  &__item {
+    padding-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border-radius: 15px;
+    background-color: #fff;
+    position: relative;
+
+    @include rm(640) {
+      max-width: 270px;
+    }
+
+    @include rm(1024) {
+      width: 100%;
+      max-width: 230px;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+      background-color: transparent;
+    }
+
+    @include rm(1220) {
+      max-width: 270px;
+    }
+
+    &::before {
+      content: "";
+      width: 40px;
+      height: 4px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      background-color: $main-orange;
+      z-index: 5;
+
+      @include rm(1024) {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      @include rm(640) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(4) {
+      picture::before {
+        display: none;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include rm(1024) {
+        margin-bottom: 0;
+      }
+    }
+
+    picture {
+      @include rm(1024) {
+        position: relative;
+      }
+
+      &::before {
+        @include rm(1024) {
+          content: "";
+          width: 70px;
+          height: 1px;
+          background-color: #e1e1e1;
+          position: absolute;
+          top: 66px;
+          right: -40px;
+        }
+
+        @include rm(1220) {
+          right: -50px;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      font-size: 22px;
+      text-align: center;
+
+      @include rm(1024) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    @include rm(1024) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__desc {
+    padding: 35px 22px 20px;
+
+    @include rm(1024) {
+      height: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    text-align: center;
+    line-height: normal;
+  }
+}

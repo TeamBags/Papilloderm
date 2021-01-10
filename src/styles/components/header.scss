@@ -45,11 +45,11 @@
                 }
 
                 &:first-child::before {
-                    background: url(../img/icon_components.png) no-repeat center center;
-                }
-
-                &:last-child::before {
                     background: url(../img/icon_reviews.png) no-repeat center center;
+                }
+                
+                &:last-child::before {
+                    background: url(../img/icon_components.png) no-repeat center center;
                 }
 
                 &::after {
