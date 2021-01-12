@@ -4,7 +4,7 @@
   }
 
   @include rm(1220) {
-    padding: 90px 0;
+    padding: 70px 0;
   }
 
   &__list {
@@ -25,13 +25,13 @@
     }
 
     @include rm(1024) {
-      margin-bottom: 70px;
+      margin-bottom: 60px;
       justify-content: space-between;
       align-items: stretch;
     }
 
     @include rm(1220) {
-      margin-bottom: 95px;
+      margin-bottom: 70px;
     }
   }
 
@@ -54,14 +54,16 @@
     }
 
     &::after {
-      content: "";
-      width: 1px;
-      height: 20px;
-      position: absolute;
-      top: -36px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #e1e1e1;
+      @include rm(1024) {
+        content: "";
+        width: 1px;
+        height: 20px;
+        position: absolute;
+        top: -36px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #e1e1e1;
+      }
     }
   }
 

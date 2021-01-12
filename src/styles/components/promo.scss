@@ -1,6 +1,6 @@
 .promo {
   @include rm(1024) {
-    padding: 30px 0 50px;
+    padding: 30px 0 60px;
   }
 
   @include rm(1220) {
@@ -108,8 +108,12 @@
 
 .promo__toptitle {
   margin-bottom: 20px;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
+
+  @include rm(640) {
+    font-size: 22px;
+  }
 
   @include rm(1024) {
     margin-bottom: 25px;
@@ -139,8 +143,8 @@
   }
 
   @include rm(1024) {
-    margin-bottom: 30px;
-    padding: 0 0 30px;
+    margin-bottom: 25px;
+    padding: 0 0 25px;
     text-align: left;
   }
 
@@ -153,9 +157,12 @@
 
 .promo__subtitle {
   margin-bottom: 20px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
+  @include rm(640) {
+    font-size: 22px;
+  }
 
   @include rm(1024) {
     text-align: left;
@@ -270,12 +277,13 @@
   color: #30302f;
 
   .price__count {
+    font-size: 20px;
     font-weight: 900;
-    font-size: 45px;
   }
 
   .x_price_current {
     margin-right: 5px;
+    font-size: 45px;
     letter-spacing: -1.4px;
   }
 
@@ -546,7 +554,7 @@
 
   @include rm(1024) {
     left: calc(50% - 95px);
-    bottom: -94px;
+    bottom: -104px;
   }
 
   @include rm(1220) {
@@ -593,11 +601,15 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
 
+  @include rm(640) {
+    font-size: 22px;
+  }
+
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 
     @include rm(640) {
       margin-right: 30px;
@@ -605,7 +617,7 @@
     }
 
     @include rm(1024) {
-      margin: 0 0 20px;
+      margin: 0 0 15px;
     }
 
     @include rm(1220) {

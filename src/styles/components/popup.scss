@@ -3,15 +3,16 @@
   border-radius: 10px;
 
   @include rm(1001) {
-    width: 815px;
-    padding: 40px 60px 27px;
+    width: 790px;
+    padding: 30px 50px 17px;
     display: flex;
     justify-content: space-between;
   }
 
   .product-wrap {
-    width: 420px;
-    left: -25px;
+    width: 380px;
+    position: absolute;
+    left: 10px;
     bottom: 0;
   }
 
@@ -23,6 +24,23 @@
 
   .form__content {
     margin-bottom: 10px;
+    padding-top: 15px;
+  }
+
+  .form__subtitle {
+    margin-bottom: 0;
+  }
+
+  .form__price {
+    margin-bottom: 10px;
+  }
+
+  input {
+    padding: 15px 23px 15px 52px;
+  }
+
+  .form__button {
+    padding: 15px 30px;
   }
 
   .form__note {
@@ -58,6 +76,8 @@
   display: none;
 
   @include rm(1001) {
+    width: 100%;
+    max-width: 350px;
     display: block;
     position: relative;
   }
@@ -70,11 +90,10 @@
 
 .popup__medal {
   top: -40px;
-  right: 55px;
+  right: 45px;
 }
 
 .popup__title {
-  max-width: 345px;
   font-size: 40px;
   font-weight: 700;
   font-style: italic;

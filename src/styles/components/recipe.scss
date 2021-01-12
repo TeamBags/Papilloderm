@@ -4,7 +4,7 @@
   }
 
   @include rm(1220) {
-    padding: 90px 0;
+    padding: 70px 0;
   }
 
   &__title {
@@ -247,6 +247,11 @@
 
   &__text {
     font-size: 18px;
+    text-align: center;
+
+    @include rm(640) {
+      text-align: left;
+    }
 
     @include rm(1220) {
       line-height: 1.2;

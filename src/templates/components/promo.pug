@@ -62,7 +62,7 @@
               br
               |
               span.nowrap.date-0.text-accent(data-format="dd monthFull")
-              | , цена
+              //- | , цена
             .form__price.price
               //- .price-old
               //-   span.price__title Старая цена
@@ -75,6 +75,7 @@
                 .price__count
                   span.x_price_current 196
                   span.x_currency грн.
+                  | *
           form.x_order_form(action="/submit" method="post")
             .input-wrap.input-wrap--name
               svg.input-icon.input-icon--user

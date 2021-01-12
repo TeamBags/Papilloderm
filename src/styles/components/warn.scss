@@ -2,8 +2,9 @@
   @include rm(1024) {
     padding: 60px 0;
   }
+
   @include rm(1220) {
-    padding: 90px 0;
+    padding: 70px 0;
   }
 
   &__content {
@@ -27,7 +28,7 @@
   }
 
   &__list {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     @include rm(640) {
       margin-bottom: 30px;
@@ -41,6 +42,7 @@
     }
 
     @include rm(1024) {
+      margin-bottom: 40px;
       justify-content: space-between;
     }
 
@@ -83,6 +85,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
+    display: none;
 
     @include rm(640) {
       width: 400px;
@@ -91,6 +94,7 @@
     @include rm(1024) {
       width: 131px;
       margin-bottom: 0;
+      display: block;
       top: 50%;
       left: 50%;
       bottom: auto;
@@ -226,6 +230,13 @@
         order: 0;
       }
     }
+
+    .usual__text {
+      @include rm(1024) {
+        text-align: right;
+      }
+    }
+
   }
 
   &:nth-child(even) {
@@ -295,6 +306,10 @@
   &__text {
     font-size: 18px;
     line-height: normal;
+    text-align: center;
+    @include rm(1024) {
+      text-align: left;
+    }
   }
 
   &__bullet {

@@ -33,7 +33,7 @@ mixin review(slide)
       img: 'review_03.png',
       name: 'Светлана В.',
       age: '44 года',
-      text: 'Папиллодерм — классное средство, удаляла две шипицы на руке, мазала на ночь, прошло где-то около двух недель, одна отпала и вторая на подходе.'
+      text: 'Papilloderm — классное средство, удаляла две шипицы на руке, мазала на ночь, прошло где-то около двух недель, одна отпала и вторая на подходе.'
     },
     {
       webp: 'review_04.webp',
@@ -47,7 +47,7 @@ mixin review(slide)
       img: 'review_05.png',
       name: 'Владимир А.',
       age: '43 года',
-      text: 'Мне понравился Папилодерм. Все папиломы отпали за две недели. Главное придерживаться инструкции и всё будет ОК. Рекомендую!'
+      text: 'Мне понравился Papilloderm. Все папиломы отпали за две недели. Главное придерживаться инструкции и всё будет ОК. Рекомендую!'
     },
     {
       webp: 'review_06.webp',
@@ -90,11 +90,11 @@ mixin review(slide)
               +review(slide)
 
         button.btn.reviews__btn.active-feed Оставить свой отзыв
-        form.think(action="#" method="POST")
+        form.think
           .think__box.think__name
             input.think__input.name__input(type="text" placeholder="Мое имя" required)
           .think__box.think__age
-            input.think__input.age__input(type="text" placeholder="Мой возраст" required)
+            input.think__input.age__input(type="number" placeholder="Мой возраст" min="18" max="99" required)
           //- .think__box.think__city
           //-   input.think__input.city__input(type="text" placeholder="Город" required)
           .think__box.think__photo

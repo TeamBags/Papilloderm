@@ -6,11 +6,11 @@
 
 @include rm(1024) {
   .banner {
+    width: 100%;
+    padding: 10px 0;
     position: fixed;
     bottom: 0;
     z-index: 30;
-    width: 100%;
-    padding: 10px 0;
     color: white;
     background-color: $main-green;
 
@@ -25,6 +25,10 @@
       justify-content: space-between;
     }
 
+    &__subtitle {
+      font-size: 17px;
+    }
+
     &__left {
       display: flex;
     }
@@ -32,6 +36,10 @@
     &__logo {
       padding: 0 5px;
       transform: rotate(-60deg);
+
+      &--img {
+        width: 59px;
+      }
     }
 
     &__text {
@@ -56,12 +64,8 @@
       font-size: 38px;
     }
 
-    .x_currency {
-      font-size: 23px;
-    }
-
     &__order-now {
-      margin-bottom: -20px;
+      margin-bottom: -15px;
       font-size: 28px;
       line-height: 1;
       font-weight: 700;

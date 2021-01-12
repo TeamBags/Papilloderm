@@ -41,7 +41,7 @@ export default () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          // adaptiveHeight: true
+          adaptiveHeight: true
         },
       },
     ],
@@ -72,12 +72,16 @@ export default () => {
     $(this).removeClass('active-feed');
   });
 
+  $('.not-number').on('input', function () {
+    $(this).val($(this).val().replace(/[A-Za-zА-Яа-яЁё]/, ''))
+  });
+
   $('.think__btn').click(function (event) {
     let iName = $(".name__input").val();
     let iSname = $(".age__input").val();
-    let iCity = $(".city__input").val();
+    // let iCity = $(".city__input").val();
     let iMassage = $(".inputText").val();
-    if (iName == "" || iSname == "" || iCity == "" || iMassage == "") {} else {
+    if (iSname !== "" && iName !== "" && iMassage !== "") {
       event.preventDefault();
       $('.feedback-modal').addClass('active-feed');
       setTimeout(function () {

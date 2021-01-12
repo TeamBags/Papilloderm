@@ -1,0 +1,7 @@
+.footer {
+  padding: 20px 0;
+
+  @include rm(1024) {
+    padding: 25px 0 50px;
+  }
+}

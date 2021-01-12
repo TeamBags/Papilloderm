@@ -1,19 +1,10 @@
 .reviews
 	overflow-x: hidden
 	position: relative
-	// &::before
-	// 	content: ''
-	// 	position: absolute
-	// 	bottom: 0
-	// 	left: 50%
-	// 	transform: translateX(-50%)
-	// 	width: 1170px
-	// 	background-color: #dbdbdb
-	// 	height: 1px
 	+rm(1024)
 		padding: 60px 0
 	+rm(1220)
-		padding: 90px 0
+		padding: 70px 0
 	&__title
 		+rm(768)
 			margin-bottom: 15px
@@ -26,9 +17,9 @@
 		+rm(768)
 			margin-bottom: 40px
 		+rm(1024)
-			margin-bottom: 75px
+			margin-bottom: 60px
 		+rm(1220)
-			margin-bottom: 85px
+			margin-bottom: 70px
 
 	&-content
 		max-width: 340px
@@ -65,8 +56,9 @@
 		padding-bottom: 25px
 		padding-top: 35px
 		margin-top: 20px
-		margin-bottom: 19px
+		margin-bottom: 5px
 		+rm(640)
+			margin-bottom: 19px
 			padding: 20px 0px 25px
 		+rm(1024)
 			box-shadow: 0 0 10px rgba(36, 66, 137, 0.1)
@@ -136,13 +128,14 @@
 		&-body
 			position: relative
 			text-align: center
-			height: 200px
 			overflow: hidden
 			transition: .3s
 			position: relative
 			width: 100%
 			+rm(640)
 				height: 205px
+			+rm(768)
+				height: 180px
 			+rm(1024)
 				height: 195px
 			+rm(1220)
@@ -185,6 +178,7 @@
 				padding-right: 25px
 				padding-left: 25px
 		&__btn
+			display: none
 			position: absolute
 			bottom: -18px
 			left: 50%
@@ -195,6 +189,8 @@
 			background-color: #7dc322
 			cursor: pointer
 			transition: .3s
+			+rm(640)
+				display: block
 			&:before, &:after
 				content: ''
 				position: absolute
@@ -229,6 +225,7 @@
 		+rm(1315)
 			right: -65px
 .shadow 
+	display: none
 	position: absolute
 	width: 100%
 	height: 30px
@@ -239,6 +236,8 @@
 	transition: opacity 1s
 	background-image: -webkit-gradient(linear,left bottom,left top,from(#fff),to(rgba(255,255,255,0)))
 	background-image: linear-gradient(to top,#fff 0%,rgba(255,255,255,0) 100%)
+	+rm(640)
+		display: block
 .text-open
 	.reviews-text-body
 		height: auto

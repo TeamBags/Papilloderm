@@ -11,11 +11,14 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+
     @include rm(640) {
-      display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      flex-direction: row;
     }
   }
 
@@ -30,8 +33,9 @@
   }
 
   form {
+    width: 100%;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
 
     @include rm(640) {
       max-width: none;
@@ -56,6 +60,7 @@
     text-align: center;
 
     @include rm(1024) {
+      margin-bottom: 10px;
       text-align: left;
     }
 
@@ -79,7 +84,7 @@
       width: 100%;
       margin: 0;
       text-align: left;
-      line-height: 0.5;
+      line-height: 1;
     }
 
     @include rm(1220) {
@@ -196,6 +201,7 @@
   }
 
   .quality {
+
     @include rm(640) {
       width: 115px;
     }
@@ -223,9 +229,9 @@
 }
 
 .action__quality {
-  margin-bottom: 20px;
   display: flex;
   justify-content: center;
+  order: 1;
 
   @include rm(640) {
     width: 50%;

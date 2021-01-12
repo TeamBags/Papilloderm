@@ -2,7 +2,7 @@
   .popup#cloneThis
     .popup__content
       .popup__left
-        h2.popup__title Избавьтесь от&nbsp;папиллом, пока&nbsp;они не&nbsp;убили вас!
+        h2.popup__title Избавьтесь от&nbsp;папиллом, пока <br> они не&nbsp;убили<br>вас!
         .product-wrap.animation-pack
           picture
             source(srcset="img/prod180.webp" type="image/webp")
@@ -20,7 +20,7 @@
                 br
                 |
                 span.nowrap.date-0.text-accent(data-format="dd monthFull")
-                | , цена
+                //- | , цена
               .form__price.price
                 //- .price-old
                 //-   span.price__title Старая цена
@@ -33,6 +33,7 @@
                   .price__count
                     span.x_price_current 196
                     span.x_currency грн.
+                    | *
             form.x_order_form.promo__form(action="/submit" method="post")
               .input-wrap.input-wrap--name
                 svg.input-icon.input-icon--user

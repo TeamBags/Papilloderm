@@ -1,7 +1,6 @@
 .expert {
   @include rm(1220) {
-    padding-top: 77px;
-    padding-bottom: 85px;
+    padding: 70px 0;
   }
 
   @include rm(1350) {
@@ -69,7 +68,7 @@
 
     @include rm(1220) {
       width: 623px;
-      bottom: -85px;
+      bottom: -70px;
     }
 
     @include rm(1350) {
@@ -81,8 +80,13 @@
 
   &__text {
     margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.2;
+
+    @include rm(640) {
+      font-size: 18px;
+      line-height: 1.5;
+    }
 
     @include rm(1220) {
       margin-bottom: 20px;
