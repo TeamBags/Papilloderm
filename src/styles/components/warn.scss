@@ -277,16 +277,16 @@
       @include rm(1220) {
         content: "";
         position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
 
     &::before {
       width: 4px;
       height: 40px;
-      top: 50%;
       left: 0;
       background-color: $main-orange;
-      transform: translateY(-50%);
     }
 
     &::after {

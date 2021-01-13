@@ -133,16 +133,15 @@
     }
 
     &::before {
-      content: "";
-      width: 162px;
-      height: 230px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-image: url(../img/decor.png);
-      background-repeat: no-repeat;
-      background-size: contain;
-      z-index: -5;
+      @include rm(480) {
+        content: "";
+        width: 162px;
+        height: 230px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -5;
+      }
 
       @include rm(640) {
         width: 230px;
@@ -187,6 +186,22 @@
       top: -67px;
       right: 77px;
     }
+  }
+}
+
+.no-webp .recipe__prod::before {
+  @include rm(480) {
+    background-image: url(../img/decor.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.webp .recipe__prod::before {
+  @include rm(480) {
+    background-image: url(../img/decor.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -238,6 +253,11 @@
   &__title {
     margin-bottom: 10px;
     font-size: 22px;
+    text-align: center;
+
+    @include rm(640) {
+      text-align: left;
+    }
 
     @include rm(1220) {
       margin-bottom: 14px;
